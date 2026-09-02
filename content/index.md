@@ -120,7 +120,7 @@ Research on an approved topic relevant to the course. Individual or group. Furth
 
 W, Sept. 2
 
-**Introduction: Hallucinations**
+**Diagnostics: Doomscrolling**
 
 - Adrienne Evans, "[Doomscrolling for Hope](https://journals.sagepub.com/doi/full/10.1177/13675494261468634?_gl=1*qaznv7*_up*MQ..*_ga*MTE0OTUyNTEwMy4xNzg4MzQzOTMz*_ga_60R758KFDG*czE3ODgzNDM5MzIkbzEkZzEkdDE3ODgzNDM5NDEkajUxJGwxJGgyMDk0MzUyNzAx)" (*European Journal of Cultural Studies* Special issue: Cultural Commons on brainrot, AI slop, and the enshittification of the internet, 1 August 2026)
 - [*Doomscroll*](https://joshuacitarella.substack.com/) (Joshua Citarella, Substack)
@@ -289,7 +289,7 @@ W, Nov. 25: No class, Thanksgiving Break
 
 ### Week 14
 
-**Warzones: The End of Images**
+**Hallucinations: Generative Images**
 
 M, Nov. 30
 
