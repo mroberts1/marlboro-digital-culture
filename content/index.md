@@ -189,7 +189,7 @@ Moodboard: 3
 
 ### Week 6
 
-**Robots and Androids**
+**Paranoid Androids**
 
 M, Oct. 5
 
@@ -235,7 +235,7 @@ Moodboard: 6
 
 ### Week 9
 
-**Ghosts and Witches**
+**How To Disappear Completely**
 
 M, Oct. 26
 
