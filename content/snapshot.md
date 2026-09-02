@@ -11,6 +11,7 @@ date: 2 September 2026
 - angelicism
 - aura-farming
 - babygirl
+- brat
 - chatbot
 - brainrot
 - doomscrolling
@@ -22,6 +23,7 @@ date: 2 September 2026
 - manglecore
 - manosphere
 - moodboard
+- overthinking
 - ragebait
 - shitposting
 - vibe-coding
