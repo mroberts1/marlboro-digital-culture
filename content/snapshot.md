@@ -5,15 +5,15 @@ date: 2 September 2026
 
 ![[img/wordcloud.png|700]]
 
-- algospeak
 - aesthetic
 - AI-slop
+- algospeak
 - angelicism
 - aura-farming
 - babygirl
+- brainrot
 - brat
 - chatbot
-- brainrot
 - doomscrolling
 - enshittification
 - gamification
