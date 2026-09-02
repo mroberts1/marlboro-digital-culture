@@ -70,6 +70,8 @@ plugins:
     order: 40
   - source: "@quartz-community/table-of-contents"
     enabled: true
+    options:
+      maxDepth: 2
     order: 50
     layout:
       position: right
