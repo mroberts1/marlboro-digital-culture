@@ -4,9 +4,9 @@ instructor: Martin Roberts
 institution: Emerson College
 term: Fall 2026
 ---
-![[img/online-marketplace-ideas.jpg]]
+![[img/bugonia.jpg]]
 
-Joshua Citarella and Caroline Busta, "[The Online Marketplace of Ideas](https://joshuacitarella.substack.com/p/the-online-marketplace-of-ideas?__readwiseLocation=) (2026)
+Image: Emma Stone in *Bugonia* (Yorgos Lanthimos, 2025)
 
 > [!custom]IN 206 Introduction to Digital Media & Culture 
 > Dr. Martin Roberts  
@@ -118,7 +118,11 @@ Research on an approved topic relevant to the course. Individual or group. Furth
 
 W, Sept. 2
 
-**Diagnostics: Doomscrolling**
+**Introduction: Monitoring the Situation**
+
+- [Monitor the Situation](https://monitor-the-situation.com/)
+
+- Joshua Citarella and Caroline Busta, "[The Online Marketplace of Ideas](https://joshuacitarella.substack.com/p/the-online-marketplace-of-ideas?__readwiseLocation=) (2026)
 
 - Adrienne Evans, "[Doomscrolling for Hope](https://journals.sagepub.com/doi/full/10.1177/13675494261468634?_gl=1*qaznv7*_up*MQ..*_ga*MTE0OTUyNTEwMy4xNzg4MzQzOTMz*_ga_60R758KFDG*czE3ODgzNDM5MzIkbzEkZzEkdDE3ODgzNDM5NDEkajUxJGwxJGgyMDk0MzUyNzAx)" (*European Journal of Cultural Studies* Special issue: Cultural Commons on brainrot, AI slop, and the enshittification of the internet, 1 August 2026)
 - [*Doomscroll*](https://joshuacitarella.substack.com/) (Joshua Citarella, Substack)
@@ -150,6 +154,8 @@ W, Sept. 16: Add/Drop Deadline
 - Emma Madden, "More Typos, Fewer Em Dashes: Writers Are Creating an Anti-AI 'Literary Counterculture'" (*WIRED*, 29 July 2026)
 - Taylor Lorenz, “[Internet ‘algospeak’ is changing our language in real time, from ‘nip nops’ to ‘le dollar bean’](https://www.washingtonpost.com/technology/2022/04/08/algospeak-tiktok-le-dollar-bean/)” (**Washington Post**, 8 April 2022)
 
+You Are Here Workshop: 1
+
 ### Week 4
 
 **Girls**
@@ -162,6 +168,8 @@ W, Sept. 23
 
 - Alex Quicho, “[Everyone is a Girl Online](https://www.wired.com/story/girls-online-culture/)” (*WIRED*, 11 September 2023)
 - Emma Copley Eisenberg, “[Notes on Frump: A Style for the Rest of Us](https://www.heyalma.com/notes-on-frump-a-style-for-the-rest-of-us/)” (_heyalma_, 10 August 2017)
+
+You Are Here Workshop: 2
 
 ### Week 5
 
@@ -176,6 +184,8 @@ W, Sept. 30
 - Queline Meadows, "The Rise of Film TikTok"
 - BookTok
 - [TikTok Cultures Research Network](https://tiktokcultures.com/)
+
+You Are Here Workshop: 3
 
 ### Week 6
 
@@ -195,6 +205,8 @@ W, Oct. 7
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up)(1878)
 
+You Are Here Workshop: 4
+
 ### Week 7
 
 M, Oct. 12: No class, Indigenous People's Day
@@ -207,7 +219,7 @@ Tu, Oct. 13
 
 W, Oct. 14 
 
-- Sarah Ciston et al., *Inventing ELIZA* (chs. TBA)
+You Are Here Workshop: 5
 
 ### Week 8
 
@@ -219,7 +231,7 @@ M, Oct. 19
 
 W, Oct. 21
 
-- Sherry Turkle, *Artificial Intimacy* (chs. TBA)
+You Are Here Workshop: 6
 
 ### Week 9
 
@@ -227,16 +239,18 @@ W, Oct. 21
 
 M, Oct. 26
 
-- Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
-- Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
+- Dominic Pettman, *Ghosting*, chs. TBA
 
 W, Oct. 28
 
-- Dominic Pettman, *Ghosting*, chs. TBA
+- Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
+- Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
+
+You Are Here Workshop: 7
 
 ### Week 10
 
-**Hiding in the Dark Forest**
+**Hiding from Predators**
 
 M, Nov. 2
 
@@ -247,9 +261,11 @@ W, Nov. 4
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
 - Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf")" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf")" (2019)
 
+You Are Here Workshop: 8
+
 ### Week 11
 
-**Operational Images**
+**Invisible Images**
 
 M, Nov. 09 
 
@@ -261,6 +277,8 @@ T, Nov 10
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
 - [*Dragonfly Eyes* presskit](pdf/Dragonfly Eyes_Presskit.pdf")
 
+You Are Here Workshop: 9
+
 W, Nov. 11: NO CLASS: Veterans' Day
 
 ### Week 12
@@ -271,9 +289,12 @@ M, Nov. 16
 
 - Xiaowei Wang, "[Behind China’s ‘pork miracle: how technology is transforming rural hog farming](https://www.theguardian.com/environment/2020/oct/08/behind-chinas-pork-miracle-how-technology-is-transforming-rural-hog-farming)" (*The Guardian*, 8 October 2020)
 - Xiaowei Wang, "When AI Farms Pigs" (*Blockchain Chicken Farm*, ch. 3)
-- Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
 W, Nov. 18
+
+- Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
+
+You Are Here Workshop: 10
 
 F, Nov. 20: WP/WF deadline
 
@@ -287,7 +308,7 @@ W, Nov. 25: No class, Thanksgiving Break
 
 ### Week 14
 
-**Hallucinations: Generative Images**
+**True Hallucinations: Generative Images**
 
 M, Nov. 30
 
@@ -295,7 +316,7 @@ Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
 
 W, Dec. 2
 
-Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
+You Are Here Workshop: 11
 
 ### Week 15
 
