@@ -10,7 +10,8 @@ date: 2 September 2026
 - AI-slop
 - angelicism
 - aura-farming
-- bot
+- babygirl
+- chatbot
 - brainrot
 - doomscrolling
 - enshittification
@@ -18,9 +19,11 @@ date: 2 September 2026
 - ghosting
 - hallucination
 - looksmaxxing
+- manglecore
 - manosphere
 - moodboard
 - ragebait
+- shitposting
 - vibe-coding
 - vtuber
 - zoomergaze
