@@ -25,12 +25,10 @@ This course considers the nature and contemporary forms of digital culture. Broa
 
 A key component of the course is the automation of various forms of creative production, from writing to the visual arts, by natural-language processing computational systems (generically known as "AI"). The course addresses some of the many issues raised by such systems, with a particular focus on questions of aesthetics and the increasingly contested relationship between artists and algorithms. While such systems now demonstrably pass the Turing Test (i.e. pass as human or their products as human-produced), they also compel us to reconsider what we mean by “art,” or “intelligence” itself.
 
-## Introduction
 
+## Curriculum objectives
 
-## Perspectives curriculum objectives
-
-This course is in fulfillment of the Interdisciplinary Perspective portion of the General Education Curriculum. It seeks to challenge students to understand and appraise the role of interdisciplinary knowledge in the arts, culture, and/or human affairs by exploring how at least two disciplinary approaches can be brought together to address a topic in a given area.
+This course is in fulfilment of the Interdisciplinary Perspective portion of the General Education Curriculum. It seeks to challenge students to understand and appraise the role of interdisciplinary knowledge in the arts, culture, and/or human affairs by exploring how at least two disciplinary approaches can be brought together to address a topic in a given area.
 
 ## Format
 

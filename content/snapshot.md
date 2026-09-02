@@ -1,5 +1,6 @@
 ---
-title: Wordcloud
+title: "Snapshot: Digital Culture"
+date: 2 September 2026
 ---
 
 ![[img/wordcloud.png|700]]
