@@ -118,7 +118,7 @@ Research on an approved topic relevant to the course. Individual or group. Furth
 
 W, Sept. 2
 
-**Introduction: Monitoring the Situation**
+**Introduction: Subterranean Homesick Aliens**
 
 - [Monitor the Situation](https://monitor-the-situation.com/)
 
