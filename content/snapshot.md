@@ -19,6 +19,7 @@ date: 2 September 2026
 - hallucination
 - looksmaxxing
 - manosphere
+- moodboard
 - ragebait
 - vibe-coding
 - vtuber
