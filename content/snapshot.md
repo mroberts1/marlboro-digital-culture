@@ -1,5 +1,5 @@
 ---
-title: "Snapshot: Digital Culture"
+title: Digital Culture Snapshot - September 2026
 date: 2 September 2026
 ---
 
