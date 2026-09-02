@@ -61,6 +61,12 @@ is retried on every subsequent rebuild and fails with
 `ENOENT: no such file or directory, unlink '../public/...'`, which blocks all
 further rebuilds. Restart to clear it. Relevant when cleaning up scratch files.
 
+Never run `build.sh` while `dev.sh` is running. Both write to `public/` and
+`build.sh` cleans it first, which deletes the files the dev server is serving
+and poisons its rebuild loop. The symptom is a server that still answers 200
+with stale content but silently stops picking up edits. Restart to clear it.
+Since CI builds on push, `build.sh` is rarely needed locally at all.
+
 Obsidian's vault root is the project root, not `content/`. The template README
 says to point Obsidian at `content/`, but `.obsidian/` sits at the root in this
 vault, so that is not what happened. Consequence: in the sidebar `content` is
