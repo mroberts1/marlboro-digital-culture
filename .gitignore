@@ -1,0 +1,12 @@
+.DS_Store
+public/
+.chum-cache/
+
+# Local Obsidian app state. Contains plugin credentials and large binaries;
+# the site build does not need it.
+.obsidian/
+
+.quartz/node_modules/
+.quartz/.quartz-cache/
+.quartz/.quartz/
+.quartz/plugins/
