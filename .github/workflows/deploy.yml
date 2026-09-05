@@ -32,6 +32,13 @@ jobs:
         working-directory: .quartz
         run: npm ci
 
+      # Git-sourced plugins land in .quartz/.quartz/plugins/, which is
+      # gitignored, and the build command does not fetch them on its own.
+      # Without this step the site builds fine but silently drops them.
+      - name: Install git plugins
+        working-directory: .quartz
+        run: npm run install-plugins
+
       - name: Build site
         working-directory: .quartz
         run: node ./quartz/bootstrap-cli.mjs build -d ../content -o ../public

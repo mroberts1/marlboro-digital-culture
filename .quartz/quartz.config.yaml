@@ -274,6 +274,10 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: github:vazome/quartz-image-zoom
+    enabled: true
+    options: {}
+    order: 50
 layout:
   groups:
     toolbar:

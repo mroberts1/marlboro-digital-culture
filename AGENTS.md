@@ -139,6 +139,25 @@ harmless; the `@font-face` in `custom.scss` is what actually loads it. Pinning
 `weights: [400]` in the config stops the request asking for a weight that does
 not exist anywhere, but does not silence the warning.
 
+## Plugins installed from git
+
+`quartz-image-zoom` (click an image to open it in a lightbox) is installed from
+`github:vazome/quartz-image-zoom`, pinned in `.quartz/quartz.lock.json`. It adds
+`class="lightbox-image"` to every content image; nothing is needed per-image.
+
+Install with the bootstrap CLI, not npx:
+`node ./quartz/bootstrap-cli.mjs plugin add github:<owner>/<repo>` from
+`.quartz/`. The CLI re-serializes `quartz.config.yaml` and drops every comment
+in it, so diff the config afterwards and restore them.
+
+Git plugins install to `.quartz/.quartz/plugins/`, not `.quartz/plugins/`. The
+loader joins `process.cwd()` with `.quartz/plugins` and the CLI already runs
+from `.quartz/`, so the path doubles up. That directory is gitignored as a
+cache, and `bootstrap-cli.mjs build` does not fetch missing plugins, so any
+build path that calls the CLI directly must run `npm run install-plugins`
+first. Dropping that step yields a green build with the plugin silently
+missing.
+
 ## Keeping this file current
 
 Update this file when a change invalidates something above, or when a new

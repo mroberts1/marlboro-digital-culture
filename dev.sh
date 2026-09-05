@@ -11,6 +11,11 @@ WS_PORT="${WS_PORT:-3003}"
 VAULT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$VAULT/.quartz"
+# Git-sourced plugins live in .quartz/.quartz/plugins/, which is gitignored,
+# and the build command does not fetch them on its own. Without this a fresh
+# clone builds fine but silently drops them.
+npm run install-plugins
+
 # See build.sh: `npx quartz` resolves to an unrelated registry package.
 node ./quartz/bootstrap-cli.mjs build --serve \
   --port "$PORT" --wsPort "$WS_PORT" \
