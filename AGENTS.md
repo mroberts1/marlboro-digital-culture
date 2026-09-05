@@ -37,6 +37,15 @@ directory passed via `-d`. A file above it is never copied to `public/`, and a
 as `src="././img/x.jpg"` and 404s. Subdirectories at any depth are fine, and
 the folder name does not matter. `content/img/` is the convention here.
 
+`build.sh` and `dev.sh` cannot run at the same time. Both use `../public` as
+the output directory, and a build starts by wiping it:
+`Cleaned output directory ../public`. The dev server serves straight out of
+that directory, so every URL 404s while a concurrent build runs, and a page
+404s until the build re-emits it. This looks exactly like a missing or broken
+page, and a browser will happily cache the 404 afterwards, so it outlives the
+build that caused it. Stop the dev server before building, and hard-reload if
+a page 404s once.
+
 Adding a new asset file needs a server restart. The incremental rebuild picks
 up markdown edits but does not copy newly added non-markdown files. The symptom
 is an `<img>` that renders while the file itself 404s. Restart `./dev.sh` and

@@ -60,15 +60,23 @@ def main():
         sys.exit(f"no terms found in {SNAPSHOT}")
 
     wc = WordCloud(
-        width=1600,
-        height=900,
-        background_color="white",
+        width=2200,
+        height=1300,
+        # Transparent, not a colour: the page background is #e2e2e2 in light
+        # mode and #191919 in dark, so any baked-in colour frames the words in
+        # one theme or the other.
+        mode="RGBA",
+        background_color=None,
         font_path=str(FONT),
         color_func=make_color_func(words),
         prefer_horizontal=1.0,
         random_state=42,
-        max_font_size=170,
-        margin=8,
+        # WordCloud scales words up to fill whatever canvas it is given, so
+        # a bigger canvas alone does not decloud anything. The breathing
+        # room comes from capping the font size well below what would fill
+        # the canvas, plus a generous margin around each word.
+        max_font_size=120,
+        margin=70,
         collocations=False,
     )
     wc.generate_from_frequencies({w: 1 for w in words})
