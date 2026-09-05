@@ -196,3 +196,100 @@ iframe.external-embed.youtube {
   height: auto;
   cursor: pointer;
 }
+
+// Print. The syllabus gets handed out as a PDF, so the page has to drop the
+// site chrome and run the article full width. Generated with:
+//   chrome --headless --no-pdf-header-footer --print-to-pdf=out.pdf <url>
+@media print {
+  @page {
+    size: letter;
+    margin: 18mm 16mm;
+  }
+
+  // Force the light palette: printing from dark mode would otherwise put a
+  // near-black ground behind everything.
+  :root {
+    --light: #fff;
+    --dark: #222;
+    --darkgray: #222;
+    --gray: #555;
+    --secondary: #222;
+  }
+
+  body {
+    background: #fff;
+    color: #222;
+  }
+
+  // `footer` is the Quartz credit block, which otherwise prints as a nearly
+  // empty last page. `.external-icon` is the little arrow after every link.
+  .left.sidebar,
+  .right.sidebar,
+  .explorer-toggle,
+  .mobile-explorer,
+  .search,
+  .darkmode,
+  .readermode,
+  .page-footer,
+  footer,
+  .external-icon {
+    display: none !important;
+  }
+
+  // Quartz's separator before the footer. It is a direct child of .center, so
+  // this does not touch the rules written in the markdown, which live inside
+  // <article>. Left in, it prints as a stray line on a page of its own.
+  .center > hr {
+    display: none !important;
+  }
+
+  .page,
+  .page .center {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Any leftover height after the last line pushes out a blank final page.
+  // The page ends with a `***` rule whose bottom margin is enough on its own,
+  // and a decorative rule with nothing after it earns nothing in print.
+  html,
+  body,
+  .page,
+  .page .center,
+  article {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  article *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  article hr:last-child {
+    display: none !important;
+  }
+
+  // Keep headings with the text they introduce, and never split a callout.
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  blockquote,
+  .callout,
+  li {
+    break-inside: avoid;
+  }
+
+  // Underlined blue links read as noise on paper.
+  a {
+    color: #222;
+    text-decoration: none;
+  }
+}
