@@ -7,6 +7,8 @@ DAW: Digital Audio Workstation
 
 IDE: Integrated Development Environment
 
+LARP: Live-Action Roleplay
+
 LLM: Large Language Model
 
 MUD: Multi-User Dungeon
