@@ -16,11 +16,10 @@ date: 2 September 2026
 - chatbot
 - doomscrolling
 - enshittification
-- gamification
+- facetuning
 - ghosting
 - hallucination
 - looksmaxxing
-- manglecore
 - manosphere
 - moodboard
 - overthinking
