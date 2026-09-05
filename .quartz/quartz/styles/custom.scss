@@ -186,3 +186,13 @@ iframe.external-embed.youtube {
     }
   }
 }
+
+// Cover animation on the front page. Click the still to play; the clip is
+// trimmed to end on the same frame as the poster, so it resolves back into
+// the cover rather than cutting away. Nothing moves until the reader asks.
+.cover-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}

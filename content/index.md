@@ -4,7 +4,26 @@ instructor: Martin Roberts
 institution: Emerson College
 term: Fall 2026
 ---
-![[bugonia-screenshot.png]]
+<video class="cover-video" muted playsinline preload="none"
+       poster="./video/bugonia-poster.jpg" width="1600" height="1066"
+       aria-label="Emma Stone in Bugonia. Click to play.">
+  <source src="./video/bugonia.webm" type="video/webm">
+  <source src="./video/bugonia.mp4" type="video/mp4">
+  <img src="./img/bugonia-screenshot.png" alt="Emma Stone in Bugonia">
+</video>
+
+<script>
+;(() => {
+  if (window.__coverVideoInit) return
+  window.__coverVideoInit = true
+  document.addEventListener("click", (e) => {
+    const v = e.target.closest && e.target.closest("video.cover-video")
+    if (!v) return
+    v.currentTime = 0
+    v.play()
+  })
+})()
+</script>
 
 <small>Image: Emma Stone in *Bugonia* (Yorgos Lanthimos, 2025)</small>
 
