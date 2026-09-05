@@ -158,6 +158,26 @@ build path that calls the CLI directly must run `npm run install-plugins`
 first. Dropping that step yields a green build with the plugin silently
 missing.
 
+## The snapshot wordcloud
+
+`content/img/wordcloud.png` is generated from the bullet list on
+`content/snapshot.md`. Edit the terms, then regenerate:
+
+    python3 script/wordcloud
+
+It is not automatic and nothing in the build checks it, so an edited term list
+with a stale image is the easy mistake: the page then shows words that are no
+longer in the list. Commit both together.
+
+Needs `pip install wordcloud`, plus Departure Mono as an `.otf` in
+`~/Library/Fonts`. The repo only ships the woff/woff2 the site loads, and
+Pillow cannot read those.
+
+Terms are weighted equally, so the whole layout reflows whenever the set
+changes. `random_state=42` makes a *given* set reproducible; it does not hold
+the layout steady across edits. Expect the image to look rearranged after
+adding a single word.
+
 ## Keeping this file current
 
 Update this file when a change invalidates something above, or when a new

@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Regenerate content/img/wordcloud.png from the term list in content/snapshot.md.
+
+Run from the vault root, after editing the term list:
+
+    python3 script/wordcloud
+
+Needs the `wordcloud` package (pip install wordcloud) and Departure Mono
+installed as an .otf. The repo only ships the woff/woff2 the site uses, which
+Pillow cannot read, so the font is taken from ~/Library/Fonts.
+
+Terms are weighted equally, so the layout reflows whenever the set changes.
+random_state only makes a *given* set of terms reproducible; it does not keep
+the layout stable across edits.
+"""
+
+import re
+import sys
+from pathlib import Path
+
+from wordcloud import WordCloud
+
+SNAPSHOT = Path("content/snapshot.md")
+OUT = Path("content/img/wordcloud.png")
+FONT = Path.home() / "Library/Fonts/DepartureMono-Regular.otf"
+
+# Muted six-hue palette, sampled from the original render so regenerating does
+# not change the look. Roughly HSL(h, 30%, 43%) at six points round the wheel.
+PALETTE = ["#7A5F8F", "#4E7F6A", "#4E6F8F", "#8F4E5F", "#8F6B4E", "#5F7A4E"]
+
+
+def make_color_func(words):
+    """Deal the palette round-robin down the term list.
+
+    Keyed by position rather than by a hash of the word: hashing clumps the
+    colours, and Python salts hash() per process, so it would not even be
+    stable between runs.
+    """
+    colors = {w: PALETTE[i % len(PALETTE)] for i, w in enumerate(words)}
+
+    def color_func(word, **kwargs):
+        return colors[word]
+
+    return color_func
+
+
+def read_terms(path):
+    """Every top-level bullet on the page is a term."""
+    return [m.group(1).strip() for m in re.finditer(r"^- (.+)$", path.read_text(), re.M)]
+
+
+def main():
+    if not SNAPSHOT.exists():
+        sys.exit(f"run from the vault root: {SNAPSHOT} not found")
+    if not FONT.exists():
+        sys.exit(f"font not found: {FONT}")
+
+    words = read_terms(SNAPSHOT)
+    if not words:
+        sys.exit(f"no terms found in {SNAPSHOT}")
+
+    wc = WordCloud(
+        width=1600,
+        height=900,
+        background_color="white",
+        font_path=str(FONT),
+        color_func=make_color_func(words),
+        prefer_horizontal=1.0,
+        random_state=42,
+        max_font_size=170,
+        margin=8,
+        collocations=False,
+    )
+    wc.generate_from_frequencies({w: 1 for w in words})
+    wc.to_file(str(OUT))
+
+    # A term that does not fit is dropped silently, so check rather than trust.
+    drawn = {entry[0][0] for entry in wc.layout_}
+    missing = [w for w in words if w not in drawn]
+    print(f"{len(words)} terms, {len(drawn)} rendered -> {OUT}")
+    if missing:
+        print("NOT RENDERED:", ", ".join(missing))
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
