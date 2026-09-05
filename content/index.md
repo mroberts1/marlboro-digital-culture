@@ -4,9 +4,9 @@ instructor: Martin Roberts
 institution: Emerson College
 term: Fall 2026
 ---
-![[img/bugonia.jpg]]
+![[bugonia-screenshot.png]]
 
-Image: Emma Stone in *Bugonia* (Yorgos Lanthimos, 2025)
+<small>Image: Emma Stone in *Bugonia* (Yorgos Lanthimos, 2025)</small>
 
 > [!custom]IN 206 Introduction to Digital Media & Culture 
 > Dr. Martin Roberts  
@@ -162,7 +162,7 @@ Moodboard: 1
 
 M, Sept. 21
 
-- Freya India, "[You Don't Need to Document Everything](https://www.freyaindia.co.uk/p/you-dont-need-to-document-everything)" (*GIRLS*, 16 January 2024)
+- Freya India, *GIRLS®* (chs. TBA)
 
 W, Sept. 23
 
