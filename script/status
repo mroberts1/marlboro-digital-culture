@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+"""Show whether each course vault's outputs are in sync with its source.
+
+    script/status            every course vault found alongside this one
+    script/status --here     only this vault
+    script/status --fast     skip the Canvas check (no browser needed)
+
+Four projects times three outputs is twelve things that can drift, and only
+the Pages deploy is automatic. This answers "what is stale?" in one place.
+
+The Canvas column needs a logged-in browser session, since Emerson blocks API
+tokens; without one it reports "no session" rather than failing.
+"""
+
+import argparse
+import html
+import json
+import re
+import subprocess
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent.parent
+
+
+def run(cmd, cwd=None, timeout=180):
+    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, timeout=timeout)
+    return r.returncode, r.stdout.strip(), r.stderr.strip()
+
+
+def is_vault(d):
+    """A course vault: Quartz, an index.md, and this tooling.
+
+    script/pdf is the marker. Without it the scan also picks up unrelated
+    Quartz vaults that share the parent directory.
+    """
+    return all((d / p).exists() for p in
+               (".quartz/quartz.config.yaml", "content/index.md", "script/pdf"))
+
+
+def find_vaults():
+    return sorted((d for d in HERE.parent.iterdir()
+                   if d.is_dir() and is_vault(d) and (d / ".git").exists()),
+                  key=lambda d: d.name)
+
+
+def git_status(v):
+    dirty = len([l for l in run(["git", "status", "--porcelain"], v)[1].splitlines() if l])
+    code, ahead, _ = run(["git", "log", "--oneline", "@{u}..HEAD"], v)
+    unpushed = len(ahead.splitlines()) if code == 0 and ahead else 0
+    if dirty and unpushed:
+        return f"{dirty} dirty, {unpushed} unpushed"
+    if dirty:
+        return f"{dirty} uncommitted"
+    if unpushed:
+        return f"{unpushed} unpushed"
+    return "clean"
+
+
+def repo_slug(v):
+    url = run(["git", "remote", "get-url", "origin"], v)[1]
+    m = re.search(r"[:/]([^/:]+/[^/]+?)(?:\.git)?$", url)
+    return m.group(1) if m else None
+
+
+def pages_status(v):
+    slug = repo_slug(v)
+    if not slug:
+        return "no remote"
+    code, out, _ = run(["gh", "run", "list", "--repo", slug, "--limit", "1",
+                        "--json", "headSha,status,conclusion"], v, timeout=60)
+    if code != 0 or not out:
+        return "unknown"
+    try:
+        run_info = json.loads(out)[0]
+    except (json.JSONDecodeError, IndexError):
+        return "never deployed"
+    if run_info["status"] != "completed":
+        return "deploying"
+    if run_info["conclusion"] != "success":
+        return f"FAILED ({run_info['conclusion']})"
+    head = run(["git", "rev-parse", "origin/main"], v)[1]
+    return "in sync" if run_info["headSha"] == head else "behind HEAD"
+
+
+def pdf_status(v):
+    pdf = v / "content/pdf/syllabus.pdf"
+    if not pdf.exists():
+        return "none"
+    src = (v / "content/index.md").stat().st_mtime
+    if pdf.stat().st_mtime >= src:
+        return "in sync"
+    age = (datetime.now(timezone.utc)
+           - datetime.fromtimestamp(pdf.stat().st_mtime, timezone.utc)).days
+    return f"stale ({age}d)"
+
+
+def canvas_status(v):
+    cfg_path = v / "canvas.json"
+    if not cfg_path.exists():
+        return "n/a"
+    cfg = json.loads(cfg_path.read_text())
+    code, _, err = run(["python3", "script/canvas", "syllabus", "--print"], v)
+    if code != 0:
+        return "build failed"
+    local = (v / "canvas-syllabus.html").read_text()
+    js = (
+        "(async () => {"
+        "const w = await fetch('/api/v1/users/self',{headers:{Accept:'application/json'},credentials:'same-origin'});"
+        "if (w.status !== 200) return JSON.stringify({error:'no session'});"
+        f"const j = await (await fetch('/api/v1/courses/{cfg['course_id']}?include[]=syllabus_body',"
+        "{headers:{Accept:'application/json'},credentials:'same-origin'})).json();"
+        "return JSON.stringify({body:j.syllabus_body||''});})()"
+    )
+    run(["agent-browser", "open", cfg["base_url"]], timeout=120)
+    code, out, _ = run(["agent-browser", "eval", js, "--json"], timeout=120)
+    if code != 0:
+        return "no session"
+    try:
+        res = json.loads(json.loads(out)["data"]["result"])
+    except Exception:
+        return "no session"
+    if res.get("error"):
+        return "no session"
+
+    def text(s):
+        """Visible text only.
+
+        Canvas rewrites the HTML it stores -- adds loading="lazy", requotes
+        attributes -- so a byte comparison always reports drift. Comparing
+        text still catches the drift that matters: content edited in one
+        place and not the other.
+        """
+        s = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.S)
+        s = html.unescape(re.sub(r"<[^>]+>", " ", s))
+        # Canvas turns some spaces into &nbsp;, which unescapes to \xa0.
+        return re.sub(r"\s+", " ", s.replace("\xa0", " ")).strip()
+
+    return "in sync" if text(res["body"]) == text(local) else "DRIFTED"
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--here", action="store_true", help="only this vault")
+    ap.add_argument("--fast", action="store_true", help="skip the Canvas check")
+    args = ap.parse_args()
+
+    vaults = [HERE] if args.here else find_vaults()
+    rows = []
+    for v in vaults:
+        rows.append((v.name, git_status(v), pages_status(v), pdf_status(v),
+                     "skipped" if args.fast else canvas_status(v)))
+
+    head = ("vault", "git", "pages", "pdf", "canvas")
+    w = [max(len(str(r[i])) for r in rows + [head]) for i in range(5)]
+    print("  ".join(h.ljust(w[i]) for i, h in enumerate(head)))
+    print("  ".join("-" * w[i] for i in range(5)))
+    for r in rows:
+        print("  ".join(str(c).ljust(w[i]) for i, c in enumerate(r)))
+
+    bad = [r[0] for r in rows
+           if any(str(c).startswith(("DRIFTED", "FAILED", "stale", "behind")) for c in r[1:])]
+    if bad:
+        print(f"\nneeds attention: {', '.join(bad)}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
