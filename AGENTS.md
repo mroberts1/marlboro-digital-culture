@@ -187,6 +187,69 @@ changes. `random_state=42` makes a *given* set reproducible; it does not hold
 the layout steady across edits. Expect the image to look rearranged after
 adding a single word.
 
+## Publishing to Canvas
+
+`script/canvas` renders `content/index.md` and pushes it to the Canvas course.
+Canvas is an output, like the Pages site and the PDF; the vault is the source.
+Editing the generated syllabus or homepage in the Canvas UI works, but the
+next push overwrites it.
+
+    script/canvas syllabus   index.md to syllabus_body
+    script/canvas pages      the content pages listed in canvas.json
+    script/canvas home       front page: cover table plus a nav line
+    script/canvas all        all three
+    --print                  write the HTML locally, push nothing
+    --publish                publish content pages instead of leaving drafts
+
+Course id, site url, page list and cover image live in `canvas.json`.
+Generated `canvas-*.html` files are build artifacts and gitignored.
+
+Emerson does not let instructors mint API tokens, so there is no token to use.
+Auth is the logged-in browser session driven through `agent-browser`: Canvas's
+own `/api/v1` endpoints accept the session cookie, with the `_csrf_token`
+cookie sent back as an `X-CSRF-Token` header on writes. Log in once with
+`agent-browser open --headed https://canvas.emerson.edu`, which prompts Duo.
+
+Things that cost time to find, each established by testing rather than docs:
+
+Canvas's sanitiser strips `<script>`, inline `<svg>`, `<link>` and HTML
+comments, and keeps `<i>`, `<img>`, and `<div>` with id/class/data attributes.
+So the click-to-play cover becomes its poster image, Font Awesome icons become
+text labels, and a Font Awesome kit cannot work in Canvas at all: both the kit
+script and the stylesheet link are stripped, leaving an empty `<i>`.
+
+Look pages up by title, never by slug. Canvas derives the slug from the title,
+so a guessed slug 404s, falls through to a create, and leaves a duplicate
+page named `-2` on every push.
+
+`fetch()` is origin-relative, so the browser has to be on Canvas before the
+script evaluates anything. Otherwise it silently talks to whatever page was
+last open and reports "not logged in".
+
+Relative URLs are absolutised against the Pages site, since `./img/x.png`
+would otherwise resolve against canvas.emerson.edu.
+
+Take a backup before any overwrite. They go in
+`~/.claude/canvas-backups/<course id>-<timestamp>/`.
+
+`digital-culture-fa26` and `lang-media-arts` get the same workflow and the
+same design, so this vault is the reference to copy from rather than a
+one-off. The shape is: home is a 50/50 table, cover and caption left, course
+details right, followed by a nav line of `Syllabus | <content pages>`, with
+`default_view` set to `wiki`. The full syllabus stays on Canvas's own Syllabus
+page, keeping the same table at the top, because Canvas appends the course
+summary below `syllabus_body`. Each `content/*.md` becomes one Canvas page.
+Copying means `script/canvas` plus `canvas.json` with a new course id, site
+url and page list.
+
+## Scanned readings and copyright
+
+Course reading PDFs are third-party scans. They belong in Canvas Files, which
+is behind institutional login, not on the public Pages site. Own work such as
+the syllabus is fine to publish either place. `digital-culture-fa26` and
+`fsu-interactive-media-fa26` already exclude readings from git for this
+reason; keep that split when adding PDFs here.
+
 ## Keeping this file current
 
 Update this file when a change invalidates something above, or when a new
