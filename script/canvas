@@ -45,6 +45,7 @@ def transform(html, cfg, with_table=True):
         sys.exit("no <article> in the built page")
     a = m.group(1)
     notes = []
+    parts = {}
 
     # Canvas strips <script>. The cover's click-to-play handler is web-only.
     a, n = re.subn(r"<script.*?</script>", "", a, flags=re.S)
@@ -142,7 +143,13 @@ def transform(html, cfg, with_table=True):
             dims = f' width="{cfg["cover_width"]}"'
             if cfg.get("cover_height"):
                 dims += f' height="{cfg["cover_height"]}"'
-        img = f'<img src="{src}" alt="Course cover image"{dims}>'
+        # No JS lightbox is possible: Canvas strips <script>. Linking the
+        # image to itself is the workable equivalent, opening it full size.
+        full = cfg.get("cover_full_url") or src
+        img = (f'<a href="{full}" target="_blank" rel="noopener">'
+               f'<img src="{src}" alt="Course cover image"{dims}></a>')
+        parts.update(cover_src=src, cover_full=full, caption=caption,
+                     heading=heading, details=details)
         table = (
             '<table style="border-collapse: collapse; width: 100%;" border="0" cellpadding="10">\n'
             "<tbody>\n<tr>\n"
@@ -162,7 +169,7 @@ def transform(html, cfg, with_table=True):
     elif with_table:
         notes.append("WARNING: cover or callout not matched; layout left stacked")
 
-    return a.strip(), notes
+    return a.strip(), notes, parts
 
 
 def goto_canvas(cfg):
@@ -294,7 +301,7 @@ def main():
 
     # index.md, with the two-column cover/details table
     if want & {"draft", "syllabus", "home"}:
-        html, notes = transform(built["index"], cfg)
+        html, notes, parts = transform(built["index"], cfg)
         (VAULT / "canvas-syllabus.html").write_text(html)
         print(f"index.md -> {len(html):,} chars")
         for n in notes:
@@ -307,7 +314,7 @@ def main():
             if src not in built:
                 print(f"  {spec['title']:34} SKIPPED (no content/{src}.md)")
                 continue
-            page_html, _ = transform(built[src], cfg, with_table=False)
+            page_html, _, _ = transform(built[src], cfg, with_table=False)
             if args.only_print:
                 (VAULT / f"canvas-{src}.html").write_text(page_html)
                 print(f"  {spec['title']:34} -> canvas-{src}.html ({len(page_html):,} chars)")
@@ -318,9 +325,8 @@ def main():
     if "home" in want:
         # The homepage is the table plus a nav line; the syllabus itself lives
         # on Canvas's own Syllabus page, which carries the course summary.
-        table = re.match(r"<table.*?</table>", html, re.S)
-        if not table:
-            sys.exit("could not find the generated table for the homepage")
+        if not parts:
+            sys.exit("could not extract the cover and details for the homepage")
         cid = cfg["course_id"]
         nav = [f'<a href="/courses/{cid}/assignments/syllabus">Syllabus</a>']
         slugs = {} if args.only_print else page_slugs(cfg)
@@ -333,7 +339,16 @@ def main():
             nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
         if missing:
             print(f"  note: not on Canvas yet, slug guessed for: {', '.join(missing)}")
-        home = table.group(0) + "\n<p>" + " | ".join(nav) + "</p>"
+        # Full width, not the syllabus table: Canvas's course-home content
+        # area is already narrow, and halving it renders the cover at ~247px.
+        # No width attribute, so it fills the column instead of being capped.
+        home = (
+            f'<p><a href="{parts["cover_full"]}" target="_blank" rel="noopener">'
+            f'<img src="{parts["cover_src"]}" alt="Course cover image"></a></p>\n'
+            f'<p><span style="font-size: 8pt;">{parts["caption"]}</span></p>\n'
+            f'<p>{parts["heading"]}</p>\n{parts["details"]}\n'
+            + "<p>" + " | ".join(nav) + "</p>"
+        )
         if args.only_print:
             (VAULT / "canvas-home.html").write_text(home)
             print(f"\nhome -> canvas-home.html ({len(home):,} chars)")
