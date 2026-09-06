@@ -197,6 +197,80 @@ iframe.external-embed.youtube {
   cursor: pointer;
 }
 
+// Target-specific lines. One source, three outputs: what belongs on the Pages
+// site is not always what belongs on Canvas -- the web syllabus links to the
+// PDF, the Canvas syllabus links back to the web. Both variants sit on one
+// line in the markdown so hiding one does not leave a stray line break.
+// script/canvas does the inverse: it drops .web-only and unwraps .canvas-only.
+.canvas-only {
+  display: none;
+}
+
+// Font Awesome 7.3.1 Free, self-hosted. Only the two faces and the four icons
+// actually used, rather than the whole 9.6MB kit: a CSS @import breaks the
+// SCSS build (@use must come first) and there is no config hook for adding a
+// <link> to <head>, so the icons are declared here the same way Departure Mono
+// is. Codepoints are read from the kit's own all.min.css, not guessed.
+//
+// Canvas strips both the kit script and inline SVG, so script/canvas rewrites
+// these <i> tags to text labels. Icons are a Pages-only affordance.
+@font-face {
+  font-family: "Font Awesome 7 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("static/fonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("static/fonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fa-brands,
+.fa-solid {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  vertical-align: -0.125em;
+}
+
+.fa-brands {
+  font-family: "Font Awesome 7 Brands";
+  font-weight: 400;
+}
+
+.fa-solid {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+}
+
+.fa-brands::before,
+.fa-solid::before {
+  content: var(--fa);
+}
+
+.fa-envelope {
+  --fa: "\f0e0";
+}
+
+.fa-mastodon {
+  --fa: "\f4f6";
+}
+
+.fa-github {
+  --fa: "\f09b";
+}
+
+.fa-twitter {
+  --fa: "\f099";
+}
+
 // Print. The syllabus gets handed out as a PDF, so the page has to drop the
 // site chrome and run the article full width. Generated with:
 //   chrome --headless --no-pdf-header-footer --print-to-pdf=out.pdf <url>
