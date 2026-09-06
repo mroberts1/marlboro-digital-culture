@@ -1,0 +1,24 @@
+{
+  "base_url": "https://canvas.emerson.edu",
+  "course_id": 2196805,
+  "site_url": "https://mroberts1.github.io/marlboro-digital-culture",
+  "draft_title": "Syllabus (draft from vault)",
+  "cover_image_url": "https://canvas.emerson.edu/courses/2196805/files/196277997/preview?location=course_syllabus_2196805",
+  "cover_width": 640,
+  "cover_height": 427,
+  "pages": [
+    {
+      "source": "bibliography",
+      "title": "Bibliography"
+    },
+    {
+      "source": "acronyms",
+      "title": "Acronyms"
+    },
+    {
+      "source": "snapshot",
+      "title": "Digital Culture Snapshot"
+    }
+  ],
+  "home_title": "Introduction to Digital Culture"
+}

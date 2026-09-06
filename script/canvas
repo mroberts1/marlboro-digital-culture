@@ -1,0 +1,328 @@
+#!/usr/bin/env python3
+"""Render content/index.md into Canvas-ready HTML and push it.
+
+    python3 script/canvas              # push to the draft page in canvas.json
+    python3 script/canvas --print      # write the HTML locally, push nothing
+    python3 script/canvas --syllabus   # push to the course syllabus_body
+
+Canvas is an OUTPUT, like the Pages site and the PDF. The vault is the source.
+Editing the generated page inside Canvas means the next push overwrites it.
+
+Auth is your logged-in browser session, driven through agent-browser: Emerson
+does not allow instructors to mint API tokens. Log in first with
+    agent-browser open --headed <base_url>
+"""
+
+import argparse
+import base64
+import json
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+from pathlib import Path
+
+VAULT = Path(__file__).resolve().parent.parent
+CONFIG = VAULT / "canvas.json"
+
+
+def build_site():
+    out = Path(tempfile.mkdtemp())
+    q = VAULT / ".quartz"
+    subprocess.run(["npm", "run", "install-plugins"], cwd=q, check=True,
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run(["node", "./quartz/bootstrap-cli.mjs", "build",
+                    "-d", "../content", "-o", str(out)], cwd=q, check=True,
+                   stdout=subprocess.DEVNULL)
+    return out
+
+
+def transform(html, cfg, with_table=True):
+    """Article HTML -> HTML that survives Canvas's sanitiser."""
+    m = re.search(r"<article[^>]*>(.*?)</article>", html, re.S)
+    if not m:
+        sys.exit("no <article> in the built page")
+    a = m.group(1)
+    notes = []
+
+    # Canvas strips <script>. The cover's click-to-play handler is web-only.
+    a, n = re.subn(r"<script.*?</script>", "", a, flags=re.S)
+    if n:
+        notes.append(f"removed {n} <script>")
+
+    # The click-to-play <video> has no Canvas equivalent; use the poster still.
+    def video_to_img(mo):
+        poster = re.search(r'poster="([^"]+)"', mo.group(0))
+        src = poster.group(1) if poster else "./img/bugonia-screenshot.png"
+        # No <p> wrapper: the video already sits inside one.
+        return f'<img src="{src}" alt="Course cover image" />'
+
+    a, n = re.subn(r"<video.*?</video>", video_to_img, a, flags=re.S)
+    if n:
+        notes.append("replaced <video> with its poster image")
+
+    # The arrow after every external link is Quartz chrome, not content.
+    a, n = re.subn(r'<svg[^>]*class="external-icon".*?</svg>', "", a, flags=re.S)
+    if n:
+        notes.append(f"removed {n} external-link icons")
+
+    # Canvas keeps <i> but strips both inline <svg> and the stylesheet/script
+    # that would give an icon font glyphs, so either form leaves the social
+    # links as empty <a></a> with nothing to click. Both carry their name --
+    # <i aria-label>, <svg><title> -- so use that as the link text.
+    def icon_to_label(mo):
+        t = re.search(r'aria-label="([^"]+)"', mo.group(0)) or re.search(
+            r"<title>([^<]+)</title>", mo.group(0))
+        return t.group(1) if t else ""
+
+    a, n1 = re.subn(r"<i\b[^>]*class=\"fa-[^\"]*\"[^>]*>\s*</i>", icon_to_label, a)
+    a, n2 = re.subn(r"<svg.*?</svg>", icon_to_label, a, flags=re.S)
+    if n1 or n2:
+        notes.append(f"replaced {n1} icon tags and {n2} inline SVGs with labels")
+
+    # Relative URLs resolve against canvas.emerson.edu once pasted into Canvas,
+    # so point them at the published site instead.
+    site = cfg["site_url"].rstrip("/")
+    a, n = re.subn(r'(src|href)="\./([^"]+)"', rf'\1="{site}/\2"', a)
+    if n:
+        notes.append(f"absolutised {n} relative URLs")
+
+    # Quartz's own wrapper div carries site styling that means nothing here.
+    a = re.sub(r'^\s*<div class="markdown-preview-view[^"]*">', "", a).rstrip()
+    if a.endswith("</div>"):
+        a = a[: -len("</div>")]
+
+    # Target-specific lines: drop the web variant, unwrap the Canvas one. The
+    # Pages site does the inverse with `.canvas-only { display: none }`.
+    a, n1 = re.subn(r'<span class="web-only">.*?</span>', "", a, flags=re.S)
+    a, n2 = re.subn(r'<span class="canvas-only">(.*?)</span>', r"\1", a, flags=re.S)
+    if n1 or n2:
+        notes.append(f"dropped {n1} web-only, unwrapped {n2} canvas-only")
+
+    # The existing Canvas syllabus opens with a 50/50 table: cover image and
+    # caption left, course details right. Quartz stacks them vertically
+    # instead, so rebuild the table here rather than diverge from the layout
+    # already in use.
+    cover = re.search(r'<p><img src="([^"]+)"[^>]*/?></p>\s*'
+                      r'<p><small>(.*?)</small></p>', a, re.S) if with_table else None
+    callout = re.search(r'<blockquote class="callout.*?'
+                        r'<div class="callout-title-inner"><p>(.*?)</p></div>.*?'
+                        r'<div class="callout-content">(.*?)</div>\s*</blockquote>',
+                        a, re.S)
+    if cover and callout:
+        caption = cover.group(2).strip()
+        heading = callout.group(1).strip()
+        details = callout.group(2).strip()
+        img = (f'<img src="{cfg["cover_image_url"]}" alt="Course cover image" '
+               f'width="{cfg["cover_width"]}" height="{cfg["cover_height"]}">')
+        table = (
+            '<table style="border-collapse: collapse; width: 100%;" border="0" cellpadding="10">\n'
+            "<tbody>\n<tr>\n"
+            '<td style="width: 50%; vertical-align: top;">\n'
+            f"<p>{img}</p>\n"
+            f'<p><span style="font-size: 8pt;">{caption}</span></p>\n'
+            "</td>\n"
+            '<td style="width: 50%; text-align: left; vertical-align: top;">\n'
+            f"<p>{heading}</p>\n{details}\n"
+            "</td>\n</tr>\n</tbody>\n</table>"
+        )
+        # Drop the stacked originals, newest span first so offsets hold.
+        for m in sorted([cover, callout], key=lambda m: m.start(), reverse=True):
+            a = a[: m.start()] + a[m.end():]
+        a = table + "\n" + a.lstrip()
+        notes.append("rebuilt the cover/details two-column table")
+    elif with_table:
+        notes.append("WARNING: cover or callout not matched; layout left stacked")
+
+    return a.strip(), notes
+
+
+def goto_canvas(cfg):
+    """fetch() is origin-relative, so the browser has to be ON Canvas.
+
+    Without this the script silently talks to whatever page was last open --
+    localhost during a dev preview, say -- and reports "not logged in".
+    """
+    subprocess.run(["agent-browser", "open", cfg["base_url"]],
+                   capture_output=True, text=True, timeout=120)
+
+
+def browser_eval(js):
+    r = subprocess.run(["agent-browser", "eval", js, "--json"],
+                       capture_output=True, text=True, timeout=180)
+    if r.returncode != 0:
+        sys.exit(f"agent-browser failed:\n{r.stderr[:400]}")
+    try:
+        return json.loads(json.loads(r.stdout)["data"]["result"])
+    except Exception:
+        sys.exit(f"unexpected agent-browser output:\n{r.stdout[:400]}")
+
+
+def page_slugs(cfg):
+    """Real slug for each page title, straight from Canvas.
+
+    Canvas derives slugs from titles by rules we should not try to reproduce;
+    guessing one is what created a duplicate page the first time round.
+    """
+    js = f"""
+(async () => {{
+  const list = await (await fetch('/api/v1/courses/{cfg["course_id"]}/pages?per_page=100',
+    {{headers:{{Accept:'application/json'}},credentials:'same-origin'}})).json();
+  return JSON.stringify(Object.fromEntries(list.map(p => [p.title, p.url])));
+}})()
+"""
+    return browser_eval(js)
+
+
+def push_syllabus(html, cfg):
+    b64 = base64.b64encode(html.encode()).decode()
+    js = f"""
+(async () => {{
+  const body = new TextDecoder().decode(Uint8Array.from(atob("{b64}"), c => c.charCodeAt(0)));
+  const csrf = decodeURIComponent((document.cookie.split('; ')
+    .find(c => c.startsWith('_csrf_token=')) || '').split('=')[1] || '');
+  const H = {{'Content-Type':'application/json','Accept':'application/json','X-CSRF-Token':csrf}};
+  const who = await fetch('/api/v1/users/self', {{headers:{{Accept:'application/json'}},credentials:'same-origin'}});
+  if (who.status !== 200) return JSON.stringify({{error:'not logged in', status:who.status}});
+  const r = await fetch('/api/v1/courses/{cfg["course_id"]}', {{method:'PUT', credentials:'same-origin', headers:H,
+    body: JSON.stringify({{course:{{syllabus_body: body}}}})}});
+  return JSON.stringify({{status:r.status, sent:body.length}});
+}})()
+"""
+    return browser_eval(js)
+
+
+def push_page(html, cfg, title, published=False):
+    """Update the page with this exact title, or create it.
+
+    Looked up by title, not slug: Canvas derives the slug from the title, so
+    guessing it creates a duplicate ("-2") on every push instead of updating.
+    """
+    b64 = base64.b64encode(html.encode()).decode()
+    js = f"""
+(async () => {{
+  const body = new TextDecoder().decode(Uint8Array.from(atob("{b64}"), c => c.charCodeAt(0)));
+  const csrf = decodeURIComponent((document.cookie.split('; ')
+    .find(c => c.startsWith('_csrf_token=')) || '').split('=')[1] || '');
+  const H = {{'Content-Type':'application/json','Accept':'application/json','X-CSRF-Token':csrf}};
+  const who = await fetch('/api/v1/users/self', {{headers:{{Accept:'application/json'}},credentials:'same-origin'}});
+  if (who.status !== 200) return JSON.stringify({{error:'not logged in', status:who.status}});
+  const TITLE = {title!r};
+  const list = await (await fetch('/api/v1/courses/{cfg["course_id"]}/pages?per_page=100',
+    {{headers:{{Accept:'application/json'}},credentials:'same-origin'}})).json();
+  const hit = list.find(p => p.title === TITLE);
+  const payload = JSON.stringify({{wiki_page:{{title:TITLE, body: body, published:{str(published).lower()}}}}});
+  const r = hit
+    ? await fetch('/api/v1/courses/{cfg["course_id"]}/pages/' + encodeURIComponent(hit.url),
+        {{method:'PUT', credentials:'same-origin', headers:H, body: payload}})
+    : await fetch('/api/v1/courses/{cfg["course_id"]}/pages',
+        {{method:'POST', credentials:'same-origin', headers:H, body: payload}});
+  const t = await r.text();
+  let slug=null; try {{ slug = JSON.parse(t).url; }} catch(e) {{}}
+  return JSON.stringify({{status:r.status, sent:body.length, slug:slug}});
+}})()
+"""
+    return browser_eval(js)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("target", nargs="?", default="draft",
+                    choices=["draft", "syllabus", "pages", "home", "all"],
+                    help="draft (default): index.md to the draft page; "
+                         "syllabus: index.md to syllabus_body; "
+                         "pages: the configured content pages; "
+                         "home: the front page; all: everything")
+    ap.add_argument("--print", action="store_true", dest="only_print",
+                    help="write the HTML locally and push nothing")
+    ap.add_argument("--publish", action="store_true",
+                    help="publish content pages instead of leaving them as drafts")
+    args = ap.parse_args()
+
+    if not CONFIG.exists():
+        sys.exit(f"missing {CONFIG}")
+    cfg = json.loads(CONFIG.read_text())
+
+    out = build_site()
+    try:
+        built = {p.stem: p.read_text() for p in out.glob("*.html")}
+    finally:
+        shutil.rmtree(out, ignore_errors=True)
+
+    if not args.only_print:
+        goto_canvas(cfg)
+
+    def report(res, what):
+        if res.get("error"):
+            sys.exit(f"\n{res['error']} (status {res.get('status')}).\n"
+                     f"Log in first:  agent-browser open --headed {cfg['base_url']}")
+        line = f"  {what:34} HTTP {res['status']}  {res['sent']:,} chars"
+        if res.get("slug"):
+            line += f"\n    {cfg['base_url']}/courses/{cfg['course_id']}/pages/{res['slug']}"
+        print(line)
+
+    want = {"all": {"syllabus", "pages", "home"}}.get(args.target, {args.target})
+
+    # index.md, with the two-column cover/details table
+    if want & {"draft", "syllabus", "home"}:
+        html, notes = transform(built["index"], cfg)
+        (VAULT / "canvas-syllabus.html").write_text(html)
+        print(f"index.md -> {len(html):,} chars")
+        for n in notes:
+            print(f"  - {n}")
+
+    if "pages" in want:
+        print("\ncontent pages:")
+        for spec in cfg.get("pages", []):
+            src = spec["source"]
+            if src not in built:
+                print(f"  {spec['title']:34} SKIPPED (no content/{src}.md)")
+                continue
+            page_html, _ = transform(built[src], cfg, with_table=False)
+            if args.only_print:
+                (VAULT / f"canvas-{src}.html").write_text(page_html)
+                print(f"  {spec['title']:34} -> canvas-{src}.html ({len(page_html):,} chars)")
+            else:
+                report(push_page(page_html, cfg, spec["title"], published=args.publish),
+                       spec["title"])
+
+    if "home" in want:
+        # The homepage is the table plus a nav line; the syllabus itself lives
+        # on Canvas's own Syllabus page, which carries the course summary.
+        table = re.match(r"<table.*?</table>", html, re.S)
+        if not table:
+            sys.exit("could not find the generated table for the homepage")
+        cid = cfg["course_id"]
+        nav = [f'<a href="/courses/{cid}/assignments/syllabus">Syllabus</a>']
+        slugs = {} if args.only_print else page_slugs(cfg)
+        missing = []
+        for spec in cfg.get("pages", []):
+            slug = slugs.get(spec["title"])
+            if slug is None:
+                missing.append(spec["title"])
+                slug = re.sub(r"[^a-z0-9]+", "-", spec["title"].lower()).strip("-")
+            nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
+        if missing:
+            print(f"  note: not on Canvas yet, slug guessed for: {', '.join(missing)}")
+        home = table.group(0) + "\n<p>" + " | ".join(nav) + "</p>"
+        if args.only_print:
+            (VAULT / "canvas-home.html").write_text(home)
+            print(f"\nhome -> canvas-home.html ({len(home):,} chars)")
+        else:
+            print("\nhomepage:")
+            report(push_page(home, cfg, cfg["home_title"], published=True),
+                   cfg["home_title"])
+
+    if "syllabus" in want and not args.only_print:
+        print("\nsyllabus:")
+        report(push_syllabus(html, cfg), "syllabus_body")
+
+    if "draft" in want and not args.only_print:
+        print("\ndraft:")
+        report(push_page(html, cfg, cfg["draft_title"]), cfg["draft_title"])
+
+
+if __name__ == "__main__":
+    main()
