@@ -79,7 +79,7 @@ OA: Open Access
 
 - OA: Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, [*Inventing ELIZA: How The First Chatbot Shaped the Future of AI*](https://direct.mit.edu/books/oa-monograph/6171/Inventing-ELIZAHow-the-First-Chatbot-Shaped-the). MA: MIT Press, 2026.
 
-- A/E: *[Freya India](jhttps://www.freyaindia.co.uk/), *GIRLS®: Generation Z and the Commodification of Everything*. New York: MacMillan Books, 2026.
+- A/E: [Freya India](https://www.freyaindia.co.uk/), *GIRLS®: Generation Z and the Commodification of Everything*. New York: MacMillan Books, 2026.
 
 - John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series.
 
@@ -91,7 +91,7 @@ OA: Open Access
 
 - Hito Steyerl, *Medium Hot: Images in the Age of Heat*. London: Verso, 2026.
 
-- Sherry Turkle, [*Artificial Intimacy: Who We Become When We Talk To Machines*]([https://www.littlebrown.co.uk/titles/sherry-turkle-2/artificial-intelligence](https://www.littlebrown.co.uk/titles/sherry-turkle-2/artificial-intimacy/9780349136912/)) Boston: Little, Brown & Company. **Published 29 September**. Please purchase after this date.
+- Sherry Turkle, [*Artificial Intimacy: Who We Become When We Talk To Machines*](https://www.littlebrown.co.uk/titles/sherry-turkle-2/artificial-intimacy/9780349136912/). Boston: Little, Brown & Company. **Published 29 September**. Please purchase after this date.
 
 ### Journals
 
