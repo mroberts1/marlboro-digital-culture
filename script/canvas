@@ -38,7 +38,7 @@ def build_site():
     return out
 
 
-def transform(html, cfg, with_table=True):
+def transform(html, cfg, with_table=True, upload=False):
     """Article HTML -> HTML that survives Canvas's sanitiser."""
     m = re.search(r"<article[^>]*>(.*?)</article>", html, re.S)
     if not m:
@@ -97,6 +97,9 @@ def transform(html, cfg, with_table=True):
 
     # Relative URLs resolve against canvas.emerson.edu once pasted into Canvas,
     # so point them at the published site instead.
+    if upload:
+        a = rewrite_pdf_links(a, cfg, notes)
+
     site = cfg["site_url"].rstrip("/")
     # Any URL that is not absolute, not an anchor, not mailto/data, and not a
     # Canvas-root path. Matching only "./" misses bare relatives like
@@ -191,6 +194,85 @@ def browser_eval(js):
         return json.loads(json.loads(r.stdout)["data"]["result"])
     except Exception:
         sys.exit(f"unexpected agent-browser output:\n{r.stdout[:400]}")
+
+
+def is_tracked(path):
+    """Tracked files are published to Pages; untracked ones are Canvas-only.
+
+    That mirrors the copyright split: our own work (the syllabus) is committed
+    and served from the public site, while third-party scans and press kits are
+    excluded from git and belong in Canvas Files, behind institutional login.
+    """
+    code, out, _ = 0, "", ""
+    r = subprocess.run(["git", "ls-files", "--error-unmatch", str(path)],
+                       cwd=VAULT, capture_output=True, text=True)
+    return r.returncode == 0
+
+
+def course_files(cfg):
+    js = f"""
+(async () => {{
+  const out = [];
+  let url = '/api/v1/courses/{cfg["course_id"]}/files?per_page=100';
+  const r = await fetch(url, {{headers:{{Accept:'application/json'}},credentials:'same-origin'}});
+  if (r.status !== 200) return JSON.stringify({{error:r.status}});
+  for (const f of await r.json()) out.push({{name:f.display_name, id:f.id, size:f.size}});
+  return JSON.stringify({{files:out}});
+}})()
+"""
+    res = browser_eval(js)
+    return {f["name"]: f for f in res.get("files", [])}
+
+
+def upload_file(cfg, path):
+    """Two steps: Canvas hands out a signed URL, then the bytes go straight to
+    it with curl. The browser never carries the file, so size is not a limit.
+    """
+    size = path.stat().st_size
+    js = f"""
+(async () => {{
+  const csrf = decodeURIComponent((document.cookie.split('; ')
+    .find(c => c.startsWith('_csrf_token=')) || '').split('=')[1] || '');
+  const r = await fetch('/api/v1/courses/{cfg["course_id"]}/files', {{
+    method:'POST', credentials:'same-origin',
+    headers:{{'Content-Type':'application/json','Accept':'application/json','X-CSRF-Token':csrf}},
+    body: JSON.stringify({{name:{path.name!r}, size:{size}, content_type:'application/pdf',
+                          parent_folder_path:'course files', on_duplicate:'overwrite'}})}});
+  const j = await r.json();
+  return JSON.stringify({{upload_url:j.upload_url, file_param:j.file_param || 'file'}});
+}})()
+"""
+    got = browser_eval(js)
+    r = subprocess.run(["curl", "-sS", "-L", "-i", "-X", "POST", got["upload_url"],
+                        "-F", f"{got['file_param']}=@{path}"],
+                       capture_output=True, text=True, timeout=900)
+    m = re.search(r"/api/v1/files/(\d+)", r.stdout)
+    if not m:
+        sys.exit(f"upload failed for {path.name}:\n{r.stdout[:300]}")
+    return int(m.group(1))
+
+
+def rewrite_pdf_links(a, cfg, notes):
+    """Point links at Canvas Files for PDFs that are not published to Pages."""
+    cid = cfg["course_id"]
+    existing = None
+    for href in sorted(set(re.findall(r'href="(?:\./)?(pdf/[^"]+\.pdf)"', a))):
+        local = VAULT / "content" / href
+        if not local.exists() or is_tracked(local):
+            continue  # published to Pages; leave the link alone
+        if existing is None:
+            existing = course_files(cfg)
+        hit = existing.get(local.name)
+        if hit and hit["size"] == local.stat().st_size:
+            fid = hit["id"]
+            notes.append(f"{local.name}: already in Canvas Files")
+        else:
+            fid = upload_file(cfg, local)
+            notes.append(f"{local.name}: uploaded to Canvas Files "
+                         f"({local.stat().st_size / 1048576:.1f} MB)")
+        a = a.replace(f'href="./{href}"', f'href="/courses/{cid}/files/{fid}"')
+        a = a.replace(f'href="{href}"', f'href="/courses/{cid}/files/{fid}"')
+    return a
 
 
 def page_slugs(cfg):
@@ -301,7 +383,8 @@ def main():
 
     # index.md, with the two-column cover/details table
     if want & {"draft", "syllabus", "home"}:
-        html, notes, parts = transform(built["index"], cfg)
+        html, notes, parts = transform(built["index"], cfg,
+                                       upload=not args.only_print)
         (VAULT / "canvas-syllabus.html").write_text(html)
         print(f"index.md -> {len(html):,} chars")
         for n in notes:
