@@ -225,7 +225,7 @@ M, Oct. 5
 
 W, Oct. 7
 
-- [Robbie](pdf/1940-Isaac-Asimov-Robbie.pdf)(Isaac Asimov, 1940)
+- [Robbie](pdf/asimov-robbie.pdf)(Isaac Asimov, 1940)
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up)(1878)
 
@@ -283,7 +283,7 @@ M, Nov. 2
 W, Nov. 4
 
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
-- Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf")" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf")" (2019)
+- Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
 Moodboard: 8
 
