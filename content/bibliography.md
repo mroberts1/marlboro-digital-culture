@@ -16,7 +16,7 @@ Finn Brunton and Helen Nissenbaum, *Obfuscation: A User's Guide for Privacy and 
 
 Kyle Chayka, *Filterworld: How Algorithms Flattened Culture* (New York: Doubleday, 2024).
 
-Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, *Inventing ELIZA: How The First Chatbot Shaped the Future of AI*. Foreword by Janet Murray. Cambridge, MA: MIT Press, 2026.
+Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, [*Inventing ELIZA: How The First Chatbot Shaped the Future of AI*](https://direct.mit.edu/books/oa-monograph/6171/Inventing-ELIZAHow-the-First-Chatbot-Shaped-the). Foreword by Janet Murray. Cambridge, MA: MIT Press, 2026.
 
 Gabriella Coleman, *Hacker, Hoaxer, Whistleblower, Spy: The Many Faces of Anonymous* (London and New York: Verso, 2014).
 
