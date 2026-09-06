@@ -1,0 +1,57 @@
+#!/bin/bash
+# Print a page of the built site to PDF.
+#
+#   ./script/pdf                     -> content/pdf/syllabus.pdf from index
+#   ./script/pdf schedule            -> content/pdf/schedule.pdf from schedule
+#   ./script/pdf index handout.pdf   -> handout.pdf from index
+#
+# Builds into a temp directory rather than ./public, so this is safe to run
+# while ./dev.sh is serving. Building into ./public would wipe it out from
+# under the dev server and 404 every page.
+#
+# The layout comes from the `@media print` block in
+# .quartz/quartz/styles/custom.scss, which hides the site chrome.
+set -e
+
+PAGE="${1:-index}"
+OUT="${2:-content/pdf/${PAGE}.pdf}"
+[ "$PAGE" = "index" ] && [ -z "$2" ] && OUT="content/pdf/syllabus.pdf"
+
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+if [ ! -x "$CHROME" ]; then
+  echo "Google Chrome not found at:" >&2
+  echo "  $CHROME" >&2
+  echo "It does the rendering; there is no fallback." >&2
+  exit 1
+fi
+
+VAULT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$VAULT"
+
+if [ ! -f "content/${PAGE}.md" ]; then
+  echo "no such page: content/${PAGE}.md" >&2
+  exit 1
+fi
+
+BUILD="$(mktemp -d)"
+trap 'rm -rf "$BUILD"' EXIT
+
+cd "$VAULT/.quartz"
+# Git-sourced plugins live in a gitignored cache and the build does not fetch
+# them on its own.
+npm run install-plugins >/dev/null
+# See build.sh: `npx quartz` resolves to an unrelated registry package.
+node ./quartz/bootstrap-cli.mjs build -d ../content -o "$BUILD" >/dev/null
+
+cd "$VAULT"
+mkdir -p "$(dirname "$OUT")"
+# --virtual-time-budget waits for fonts and images instead of printing a
+# half-loaded page.
+"$CHROME" --headless --disable-gpu --no-pdf-header-footer \
+  --virtual-time-budget=10000 \
+  --print-to-pdf="$VAULT/$OUT" "file://$BUILD/${PAGE}.html" 2>/dev/null
+
+PAGES=$(python3 -c "
+d=open('$VAULT/$OUT','rb').read()
+print(d.count(b'/Type /Page') - d.count(b'/Type /Pages'))")
+echo "$OUT  ($PAGES pages, $(du -h "$VAULT/$OUT" | cut -f1))"

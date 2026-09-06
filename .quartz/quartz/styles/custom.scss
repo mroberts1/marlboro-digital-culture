@@ -252,9 +252,8 @@ iframe.external-embed.youtube {
     padding: 0;
   }
 
-  // Any leftover height after the last line pushes out a blank final page.
-  // The page ends with a `***` rule whose bottom margin is enough on its own,
-  // and a decorative rule with nothing after it earns nothing in print.
+  // Any leftover height after the last line pushes out a blank final page. A
+  // trailing decorative rule earns nothing in print.
   html,
   body,
   .page,
@@ -287,9 +286,12 @@ iframe.external-embed.youtube {
     break-inside: avoid;
   }
 
-  // Underlined blue links read as noise on paper.
-  a {
+  // Underlined blue links read as noise on paper, and internal links carry a
+  // highlight box that prints as a grey slab.
+  a,
+  a.internal {
     color: #222;
+    background: none !important;
     text-decoration: none;
   }
 }
