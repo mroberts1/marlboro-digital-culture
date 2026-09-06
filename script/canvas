@@ -53,14 +53,27 @@ def transform(html, cfg, with_table=True):
 
     # The click-to-play <video> has no Canvas equivalent; use the poster still.
     def video_to_img(mo):
-        poster = re.search(r'poster="([^"]+)"', mo.group(0))
-        src = poster.group(1) if poster else "./img/bugonia-screenshot.png"
-        # No <p> wrapper: the video already sits inside one.
-        return f'<img src="{src}" alt="Course cover image" />'
+        """A poster means a click-to-play cover; keep everything else as video.
 
-    a, n = re.subn(r"<video.*?</video>", video_to_img, a, flags=re.S)
-    if n:
-        notes.append("replaced <video> with its poster image")
+        Canvas keeps <video>, <source> and <iframe>, so a plain embed plays
+        there and should be left alone. A poster implies the JS click-to-play
+        handler that Canvas strips, so that one becomes its still instead.
+        """
+        block = mo.group(0)
+        poster = re.search(r'poster="([^"]+)"', block)
+        if not poster:
+            video_to_img.kept += 1
+            return block
+        video_to_img.posterised += 1
+        # No <p> wrapper: the video already sits inside one.
+        return f'<img src="{poster.group(1)}" alt="Course cover image" />'
+
+    video_to_img.posterised = video_to_img.kept = 0
+    a, _ = re.subn(r"<video.*?</video>", video_to_img, a, flags=re.S)
+    if video_to_img.posterised:
+        notes.append(f"replaced {video_to_img.posterised} <video> with its poster image")
+    if video_to_img.kept:
+        notes.append(f"kept {video_to_img.kept} <video> as-is (Canvas plays them)")
 
     # The arrow after every external link is Quartz chrome, not content.
     a, n = re.subn(r'<svg[^>]*class="external-icon".*?</svg>', "", a, flags=re.S)
@@ -84,7 +97,11 @@ def transform(html, cfg, with_table=True):
     # Relative URLs resolve against canvas.emerson.edu once pasted into Canvas,
     # so point them at the published site instead.
     site = cfg["site_url"].rstrip("/")
-    a, n = re.subn(r'(src|href)="\./([^"]+)"', rf'\1="{site}/\2"', a)
+    # Any URL that is not absolute, not an anchor, not mailto/data, and not a
+    # Canvas-root path. Matching only "./" misses bare relatives like
+    # "video/x.mp4", which then 404 against canvas.emerson.edu.
+    a, n = re.subn(r'(src|href)="(?!https?:|mailto:|data:|#|/)\.?/?([^"]+)"',
+                   rf'\1="{site}/\2"', a)
     if n:
         notes.append(f"absolutised {n} relative URLs")
 
@@ -104,8 +121,10 @@ def transform(html, cfg, with_table=True):
     # caption left, course details right. Quartz stacks them vertically
     # instead, so rebuild the table here rather than diverge from the layout
     # already in use.
+    # The caption may or may not be wrapped in <small>; vaults differ.
     cover = re.search(r'<p><img src="([^"]+)"[^>]*/?></p>\s*'
-                      r'<p><small>(.*?)</small></p>', a, re.S) if with_table else None
+                      r'<p>(?:<small>)?(.*?)(?:</small>)?</p>',
+                      a, re.S) if with_table else None
     callout = re.search(r'<blockquote class="callout.*?'
                         r'<div class="callout-title-inner"><p>(.*?)</p></div>.*?'
                         r'<div class="callout-content">(.*?)</div>\s*</blockquote>',
@@ -114,8 +133,16 @@ def transform(html, cfg, with_table=True):
         caption = cover.group(2).strip()
         heading = callout.group(1).strip()
         details = callout.group(2).strip()
-        img = (f'<img src="{cfg["cover_image_url"]}" alt="Course cover image" '
-               f'width="{cfg["cover_width"]}" height="{cfg["cover_height"]}">')
+        # cover_image_url is an override, for a cover hosted on Canvas itself.
+        # Without it, use whatever index.md points at, so changing the cover in
+        # the vault does not leave a stale URL in canvas.json.
+        src = cfg.get("cover_image_url") or cover.group(1)
+        dims = ""
+        if cfg.get("cover_width"):
+            dims = f' width="{cfg["cover_width"]}"'
+            if cfg.get("cover_height"):
+                dims += f' height="{cfg["cover_height"]}"'
+        img = f'<img src="{src}" alt="Course cover image"{dims}>'
         table = (
             '<table style="border-collapse: collapse; width: 100%;" border="0" cellpadding="10">\n'
             "<tbody>\n<tr>\n"
