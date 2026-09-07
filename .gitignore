@@ -21,3 +21,7 @@ canvas-*.html
 .cursor/
 .vscode/
 .windsurf/
+
+# Video sources. The site serves the mp4/webm derivatives, which are tracked;
+# the .mov masters they are transcoded from are large and referenced nowhere.
+content/video/*.mov

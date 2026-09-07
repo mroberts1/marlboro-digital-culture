@@ -18,6 +18,7 @@ date: 2 September 2026
 - enshittification
 - facetuning
 - ghosting
+- goblin-mode
 - hallucination
 - looksmaxxing
 - manosphere
