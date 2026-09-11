@@ -271,6 +271,31 @@ iframe.external-embed.youtube {
   --fa: "\f099";
 }
 
+// Links in the body are otherwise marked only by colour, which barely
+// separates them from the text in a single-weight monospace face. Underline
+// them on screen. Sidebar, nav and footer links are left alone: their position
+// already says they are links, and underlining the whole explorer is noise.
+// The print block below strips these again, so the PDF is unaffected.
+article a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+// Two exceptions inside the article: the Font Awesome contact icons in the
+// course-details callout, and the anchor Quartz appends to each heading. An
+// underline under a glyph or a section title reads as a mistake.
+article a:has(.fa-brands),
+article a:has(.fa-solid),
+article h1 > a,
+article h2 > a,
+article h3 > a,
+article h4 > a,
+article h5 > a,
+article h6 > a {
+  text-decoration: none;
+}
+
 // Print. The syllabus gets handed out as a PDF, so the page has to drop the
 // site chrome and run the article full width. Generated with:
 //   chrome --headless --no-pdf-header-footer --print-to-pdf=out.pdf <url>
