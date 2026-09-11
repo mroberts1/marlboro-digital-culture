@@ -83,7 +83,8 @@ OA: Open Access
 
 - John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series.
 
-- Bogna Konior, *The Dark Forest Theory of the Internet*. Cambridge: Polity Press, 2026.
+- E: [Bogna Konior](https://bognamk.com/), [*The Dark Forest Theory of the Internet*](https://www.politybooks.com/bookdetail?book_slug=the-dark-forest-theory-of-the-internet--9781509569250). Cambridge: Polity Press, 2026.
+- \---, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf). Pittsburg and New York: Flugschriften, 2020.
 
 - OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
  
@@ -167,7 +168,7 @@ Michèle Mendelssohn and Charlie Tyson, "[Why Does Everything Feel So Joyless? W
 
 M, Sept 14
 
-Adam Aleksic, *Algospeak*, chs. 1-2:
+Adam Aleksic, [*Algospeak*](pdf/algospeak-chapters.pdf):
 
 - "Why Your Kids Are Saying 'Unalive'" (Introduction)
 - "No Because What Happened To Your Attention?" (ch. 3)
@@ -278,7 +279,8 @@ Moodboard: 7
 
 M, Nov. 2
 
-- Bogna Konior, *The Dark Forest Theory of the Internet* (chs. TBA)
+- Bogna Konior, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf)
+(read at least this short version; chapters from the longer book will also be provided)
 
 W, Nov. 4
 
