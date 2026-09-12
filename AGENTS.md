@@ -142,11 +142,22 @@ Everything the YAML cannot express lives in `.quartz/quartz/styles/custom.scss`:
 the self-hosted font, a tighter heading scale, wrapped code blocks, a card grid
 for folder listings, and the `[!custom]` callout.
 
-Departure Mono is not on Google Fonts. Every build logs
-`Google Fonts returned HTTP 400 for Departure Mono`. This is expected and
-harmless; the `@font-face` in `custom.scss` is what actually loads it. Pinning
-`weights: [400]` in the config stops the request asking for a weight that does
-not exist anywhere, but does not silence the warning.
+Helvetica Neue is the header, body and code face, set in `quartz.config.yaml`
+with `fontOrigin: local` because it is a system face rather than a Google font.
+The fallback stack for machines without it lives in `custom.scss`, which is
+unlayered and so outranks the bare family the quartz-fonts plugin emits. That
+plugin also hard-sets `h1..h6` unlayered, from a stylesheet loaded after
+`custom.scss`, so the heading override there is prefixed with `body` to win on
+specificity rather than source order.
+
+`og-image` is disabled as a consequence: it fetches the `theme.typography`
+families from Google Fonts to draw social cards and aborts the build with "No
+fonts are loaded" when it cannot find them. Re-enabling it means going back to a
+Google-served family.
+
+The Departure Mono `@font-face` and its font files are kept but unreferenced, so
+switching back is a config change alone. Its paths are relative, not
+root-absolute, and must stay that way if it is ever re-enabled.
 
 ## Plugins installed from git
 
