@@ -12,14 +12,12 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: local
     cdnCaching: true
     typography:
-      header:
-        name: Departure Mono
-        weights: [400]
-      body: Roboto Mono
-      code: Ubuntu Mono
+      header: Helvetica Neue
+      body: Helvetica Neue
+      code: Helvetica Neue
     colors:
       lightMode:
         light: "#e2e2e2"
@@ -105,15 +103,13 @@ plugins:
   # theme enabled there is no font registry to read, so the plugin falls back to
   # Quartz's defaults (Schibsted Grotesk / Source Sans Pro) and emits them as
   # unlayered CSS, which outranks the layered values from theme.typography.
-  # Departure Mono is not on Google Fonts; it is skipped there and resolved by
-  # the self-hosted @font-face in quartz/styles/custom.scss.
   - source: "@quartz-community/quartz-fonts"
     enabled: true
     options:
-      fontOrigin: googleFonts
-      header: Departure Mono
-      body: Roboto Mono
-      code: Ubuntu Mono
+      fontOrigin: local
+      header: Helvetica Neue
+      body: Helvetica Neue
+      code: Helvetica Neue
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -132,8 +128,12 @@ plugins:
       enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: true
+  # Off: it fetches theme.typography families from Google Fonts to draw social
+  # cards, and Helvetica Neue is not on Google Fonts, so the build fails with
+  # "Failed to emit from plugin CustomOgImages". Social cards are not wanted
+  # here, so the emitter goes rather than the font.
   - source: "@quartz-community/og-image"
-    enabled: true
+    enabled: false
   - source: "@quartz-community/cname"
     enabled: false
   - source: "@quartz-community/canvas-page"
