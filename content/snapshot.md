@@ -26,6 +26,7 @@ date: 14 September 2026
 - prompt
 - ragebait
 - red-flag
+- side-eye
 - vibe-coding
 - zoomergaze
 
