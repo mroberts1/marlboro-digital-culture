@@ -18,6 +18,62 @@
     {
       "source": "snapshot",
       "title": "Digital Culture Snapshot"
+    },
+    {
+      "source": "banned-words",
+      "title": "Banned Words"
+    },
+    {
+      "source": "rur-intro",
+      "title": "Introduction: R.U.R. and the Vision of Artificial Life"
+    },
+    {
+      "source": "week-03",
+      "title": "W3: Language"
+    },
+    {
+      "source": "week-04",
+      "title": "W4: Girlhood: Out of Body Experiences"
+    },
+    {
+      "source": "week-05",
+      "title": "W5: Platform Cultures"
+    },
+    {
+      "source": "week-06",
+      "title": "W6: Paranoid Androids"
+    },
+    {
+      "source": "week-07",
+      "title": "W7: Please Go On: Chatbots"
+    },
+    {
+      "source": "week-08",
+      "title": "W8: Artificial Friends"
+    },
+    {
+      "source": "week-09",
+      "title": "W9: How To Disappear Completely"
+    },
+    {
+      "source": "week-10",
+      "title": "W10: Hiding from Predators"
+    },
+    {
+      "source": "week-11",
+      "title": "W11: Invisible Images"
+    },
+    {
+      "source": "week-12",
+      "title": "W12: Blockchain Media"
+    },
+    {
+      "source": "week-13",
+      "title": "W13: Blockchain Media"
+    },
+    {
+      "source": "week-14",
+      "title": "W14: True Hallucinations: Generative Images"
     }
   ],
   "home_title": "Introduction to Digital Culture"
