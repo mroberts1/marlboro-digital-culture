@@ -1,31 +1,30 @@
 ---
-title: Digital Culture Snapshot - September 2026
-date: 2 September 2026
+title: Digital Culture - Snapshot
+date: 13 September 2026
 ---
 
 ![[img/wordcloud.png|700]]
 
-- aesthetic
+- agent
 - AI-slop
 - algospeak
 - aura-farming
-- babygirl
-- brainrot
+- brain-rot
 - BRAT
-- chad
 - chatbot
-- doomscrolling
+- CHUD
+- corecore
+- destigmatization
 - facetuning
 - ghosting
 - goblin-mode
 - gooning
-- hallucination
 - looksmaxxing
-- mogger
-- moodboard
-- overthinking
+- mogging
+- prompt
 - ragebait
 - red-flag
 - vibe-coding
-- vtuber
 - zoomergaze
+
+Updated 13 September 2026
