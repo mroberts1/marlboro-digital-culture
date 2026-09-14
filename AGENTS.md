@@ -217,6 +217,8 @@ next push overwrites it.
     --publish                publish content pages instead of leaving drafts
 
 Course id, site url, page list and cover image live in `canvas.json`.
+A page's `source` is the Quartz slug, which is lowercased: `rur-intro` for
+`RUR-intro.md`. A mismatch prints `SKIPPED (no content/X.md)` even though the file exists.
 Generated `canvas-*.html` files are build artifacts and gitignored.
 
 Emerson does not let instructors mint API tokens, so there is no token to use.
