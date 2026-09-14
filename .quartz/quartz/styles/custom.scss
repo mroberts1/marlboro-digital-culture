@@ -323,6 +323,29 @@ article h6 > a {
   text-decoration: none;
 }
 
+// Left-floated image with the following text wrapped to its right. Markdown
+// has no float syntax, so the page uses a raw <img class="float-left"> and
+// ends the wrap with <div class="clear-float"></div>. flow-root keeps a
+// blockquote's left border beside the image instead of under it.
+img.float-left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+
+  @media all and #{$mobile} {
+    float: none;
+    display: block;
+    margin: 0 0 1rem 0;
+  }
+}
+
+img.float-left ~ blockquote {
+  display: flow-root;
+}
+
+.clear-float {
+  clear: both;
+}
+
 // Print. The syllabus gets handed out as a PDF, so the page has to drop the
 // site chrome and run the article full width. Generated with:
 //   chrome --headless --no-pdf-header-footer --print-to-pdf=out.pdf <url>
