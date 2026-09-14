@@ -1,0 +1,20 @@
+---
+title: "W4: Girlhood: Out of Body Experiences"
+---
+
+*21-23 September 2026*
+
+## Monday 21 September
+
+- Freya India, *GIRLS®* (chs. TBA)
+
+## Wednesday 23 September
+
+- Alex Quicho, "[Everyone is a Girl Online](https://www.wired.com/story/girls-online-culture/)" (*WIRED*, 11 September 2023)
+- Emma Copley Eisenberg, "[Notes on Frump: A Style for the Rest of Us](https://www.heyalma.com/notes-on-frump-a-style-for-the-rest-of-us/)" (*heyalma*, 10 August 2017)
+
+Moodboard: 2
+
+***
+
+[Back to the syllabus](index)
