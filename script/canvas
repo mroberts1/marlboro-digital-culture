@@ -397,7 +397,8 @@ def main():
             if src not in built:
                 print(f"  {spec['title']:34} SKIPPED (no content/{src}.md)")
                 continue
-            page_html, _, _ = transform(built[src], cfg, with_table=False)
+            page_html, _, _ = transform(built[src], cfg, with_table=False,
+                                        upload=not args.only_print)
             if args.only_print:
                 (VAULT / f"canvas-{src}.html").write_text(page_html)
                 print(f"  {spec['title']:34} -> canvas-{src}.html ({len(page_html):,} chars)")
