@@ -99,7 +99,7 @@ OA: Open Access
 - [e-flux](https://www.e-flux.com/journal)
 - [New Models](https://www.newmodels.io/)
 
-### Substack: Recommended blogs
+### Substack Blogs
 
 - [GIRLS](https://www.freyaindia.co.uk/) (Freya India)
 - [_Internal Exile_](https://robhorning.substack.com/) (Rob Horning)
@@ -177,7 +177,7 @@ Adam Aleksic, [*Algospeak*](pdf/algospeak-chapters.pdf):
 W, Sept. 16: Add/Drop Deadline
 
 - Emma Madden, "More Typos, Fewer Em Dashes: Writers Are Creating an Anti-AI 'Literary Counterculture'" (*WIRED*, 29 July 2026)
-- Taylor Lorenz, “[Internet ‘algospeak’ is changing our language in real time, from ‘nip nops’ to ‘le dollar bean’](https://www.washingtonpost.com/technology/2022/04/08/algospeak-tiktok-le-dollar-bean/)” (**Washington Post**, 8 April 2022)
+- Taylor Lorenz, “[Internet ‘algospeak’ is changing our language in real time, from ‘nip nops’ to ‘le dollar bean’](https://www.washingtonpost.com/technology/2022/04/08/algospeak-tiktok-le-dollar-bean/)” (*Washington Post, 8 April 2022)
 
 Moodboard: 1
 
@@ -222,7 +222,7 @@ M, Oct. 5
 
 - Jitka Čejková, [Introduction](/courses/2208282/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life "Introduction: R.U.R. and the Vision of Artificial Life") to *R.U.R. and the Vision of Artificial Life*
 - [Robot100 website](https://www.robot100.cz/rur)
-- Čapek, [*R.U.R.*](pdf/"R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf")
+- Čapek, [*R.U.R.*](pdf/R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf)
 
 W, Oct. 7
 
