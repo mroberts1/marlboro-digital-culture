@@ -94,6 +94,10 @@ to size, where the number is pixels and height stays auto:
 ![[img/photo.jpg|500x300]]
 ```
 
+`![[x.avif]]` renders as a transclude link, not an image, because the wikilink
+embed does not recognise `.avif`. Convert with
+`sips -s format jpeg img/x.avif --out img/x.jpg`.
+
 Callouts. All 13 Obsidian types render, plus a 14th `custom` defined by this
 theme. A blank line ends a callout, there is no closing marker; use a bare `>`
 for a blank line inside one. Append `-` to start collapsed, `+` for expanded but
