@@ -1,6 +1,6 @@
 ---
 title: Digital Culture - Snapshot
-date: 13 September 2026
+date: 14 September 2026
 ---
 
 ![[img/wordcloud.png|700]]
@@ -8,14 +8,16 @@ date: 13 September 2026
 - agent
 - AI-slop
 - algospeak
+- attention-cycle
 - aura-farming
 - brain-rot
 - BRAT
+- chad
 - chatbot
-- CHUD
 - corecore
 - destigmatization
 - facetuning
+- filter-bubble
 - ghosting
 - goblin-mode
 - gooning
