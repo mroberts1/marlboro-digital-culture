@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate content/img/wordcloud.png from the term list in content/snapshot.md.
+"""Regenerate content/img/wordcloud.png from the term list in content/dystopian-zeitgeist.md.
 
 Run from the vault root, after editing the term list:
 
@@ -20,7 +20,7 @@ from pathlib import Path
 
 from wordcloud import WordCloud
 
-SNAPSHOT = Path("content/snapshot.md")
+SNAPSHOT = Path("content/dystopian-zeitgeist.md")
 OUT = Path("content/img/wordcloud.png")
 FONT = Path.home() / "Library/Fonts/DepartureMono-Regular.otf"
 

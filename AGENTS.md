@@ -182,10 +182,10 @@ build path that calls the CLI directly must run `npm run install-plugins`
 first. Dropping that step yields a green build with the plugin silently
 missing.
 
-## The snapshot wordcloud
+## The wordcloud
 
 `content/img/wordcloud.png` is generated from the bullet list on
-`content/snapshot.md`. Edit the terms, then regenerate:
+`content/dystopian-zeitgeist.md`. Edit the terms, then regenerate:
 
     python3 script/wordcloud
 
