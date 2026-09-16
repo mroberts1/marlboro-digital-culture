@@ -1,6 +1,5 @@
 ---
-title: Digital Culture - Snapshot
-date: 14 September 2026
+title: "Dystopian Zeitgeist"
 ---
 
 ![[img/wordcloud.png|700]]
@@ -14,7 +13,6 @@ date: 14 September 2026
 - BRAT
 - chad
 - chatbot
-- corecore
 - destigmatization
 - facetuning
 - filter-bubble
@@ -23,7 +21,7 @@ date: 14 September 2026
 - gooning
 - looksmaxxing
 - mogging
-- prompt
+- post-ironic
 - ragebait
 - red-flag
 - side-eye
