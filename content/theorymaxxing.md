@@ -1,9 +1,15 @@
 ---
 title: "Theorymaxxing"
 ---
-Internet pop theory
+**Internet pop theory**
 
-- engagement treadmillC
+- attention economy (Herbert A. Simon, 1971)
+- diffusion of innovations (Everett Rogers, 1962)
+- echo chamber
+- engagement optimization
+- engagement treadmill
+- filter bubble
 - Matthew Effect
 - online disinhibition effect
+- over-attribution
 - Poe's Law
