@@ -1,5 +1,5 @@
 ---
-title: Digital Culture - Acronyms
+title: Acronyms
 date: 4 September 2026
 ---
 
