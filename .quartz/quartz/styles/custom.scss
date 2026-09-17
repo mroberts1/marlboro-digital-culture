@@ -31,7 +31,7 @@
 }
 
 :root {
-  --customCallout: #b7ffec59;
+  --customCallout: var(--highlight);
   --searchBackground: #d3d3d3;
 
   // Helvetica Neue ships with macOS and iOS but not with Windows or most Linux
@@ -43,7 +43,7 @@
 }
 
 :root[saved-theme="dark"] {
-  --customCallout: #00b8d410;
+  --customCallout: var(--highlight);
   --searchBackground: #252525;
 }
 

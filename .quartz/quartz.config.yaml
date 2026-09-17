@@ -19,26 +19,28 @@ configuration:
       body: Helvetica Neue
       code: Helvetica Neue
     colors:
+      # letterpress palette from jzhao.xyz: navy ink + vermilion on warm paper
       lightMode:
-        light: "#e2e2e2"
-        lightgray: "#4e4e4e"
-        gray: "#4e4e4e"
-        darkgray: "#4e4e4e"
-        dark: "#4e4e4e"
-        secondary: "#4e4e4e"
-        tertiary: "#c0ffe1"
-        highlight: rgba(128, 128, 128, 0.35)
-        textHighlight: "#fff23688"
+        light: "#f5eedd"
+        lightgray: "#e3d9c0"
+        gray: "#9a8e76"
+        darkgray: "#2d4673"
+        dark: "#16294e"
+        secondary: "#284d78"
+        tertiary: "#c8482b"
+        highlight: rgba(200, 72, 43, 0.1)
+        textHighlight: "#f4c84b88"
+      # cyanotype palette from jzhao.xyz: light blue + vermilion on prussian blue
       darkMode:
-        light: "#191919"
-        lightgray: "#393639"
-        gray: "#e2e2e2"
-        darkgray: "#e2e2e2"
-        dark: "#ebebec"
-        secondary: "#7c7c7c"
-        tertiary: "#c0ffe1"
-        highlight: rgba(125, 125, 125, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#06182f"
+        lightgray: "#122845"
+        gray: "#7191b8"
+        darkgray: "#caddf4"
+        dark: "#eef4fc"
+        secondary: "#8fb9de"
+        tertiary: "#e0552f"
+        highlight: rgba(224, 85, 47, 0.14)
+        textHighlight: "#c9542f55"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
