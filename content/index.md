@@ -187,7 +187,10 @@ Moodboard: 1
 
 M, Sept. 21
 
-- Freya India, *GIRLS®* (chs. TBA)
+- Freya India, *GIRLS®*:
+
+- "[Introduction](pdf/freya-india-girls-intro.pdf)"
+- "[Filtered](pdf/freya-india-girls-ch1.pdf)" (ch. 1)
 
 W, Sept. 23
 

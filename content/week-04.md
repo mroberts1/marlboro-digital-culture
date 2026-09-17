@@ -6,7 +6,14 @@ title: "W4: Girlhood: Out of Body Experiences"
 
 ## Monday 21 September
 
-- Freya India, *GIRLS®* (chs. TBA)
+**Girlhood: Out of Body Experiences**
+
+M, Sept. 21
+
+- Freya India, *GIRLS®*:
+
+- "[Introduction](pdf/freya-india-girls-intro.pdf)"
+- "[Filtered](pdf/freya-india-girls-ch1.pdf)" (ch. 1)
 
 ## Wednesday 23 September
 
