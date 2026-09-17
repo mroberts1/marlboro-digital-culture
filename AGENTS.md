@@ -238,6 +238,8 @@ script and the stylesheet link are stripped, leaving an empty `<i>`.
 Look pages up by title, never by slug. Canvas derives the slug from the title,
 so a guessed slug 404s, falls through to a create, and leaves a duplicate
 page named `-2` on every push.
+Changing a page's `title` in `canvas.json` therefore creates a second page and
+orphans the original, which stays until it is deleted by hand.
 
 `fetch()` is origin-relative, so the browser has to be on Canvas before the
 script evaluates anything. Otherwise it silently talks to whatever page was
