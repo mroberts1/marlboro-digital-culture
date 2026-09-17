@@ -216,6 +216,9 @@ next push overwrites it.
     --print                  write the HTML locally, push nothing
     --publish                publish content pages instead of leaving drafts
 
+Readings are listed in both `index.md` and the week pages. When pushing a week
+page, check whether `index.md` changed too, and if so push `syllabus` as well.
+
 Course id, site url, page list and cover image live in `canvas.json`.
 A page's `source` is the Quartz slug, which is lowercased: `rur-intro` for
 `RUR-intro.md`. A mismatch prints `SKIPPED (no content/X.md)` even though the file exists.
