@@ -20,6 +20,5 @@ Filter Bubble: 8
 
 No class: Veterans' Day
 
-***
 
-[Back to the syllabus](index)
+

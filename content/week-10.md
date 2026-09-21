@@ -13,8 +13,5 @@ title: "W10: Hiding from Predators"
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
 - Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" and "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
-Filter Bubble: 7
 
-***
 
-[Back to the syllabus](index)

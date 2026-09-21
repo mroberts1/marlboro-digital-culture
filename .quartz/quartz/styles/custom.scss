@@ -444,3 +444,10 @@ img.float-left ~ blockquote {
     text-decoration: none;
   }
 }
+
+// A rule under the week pages in the sidebar, which quartz.config.yaml sorts first.
+.explorer-ul li:has(> a[href*="week-"]) + li:not(:has(> a[href*="week-"])) {
+  border-top: 1px solid var(--lightgray);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}

@@ -12,8 +12,5 @@ title: "W8: Artificial Friends"
 
 No assigned reading.
 
-Filter Bubble: 5
 
-***
 
-[Back to the syllabus](index)

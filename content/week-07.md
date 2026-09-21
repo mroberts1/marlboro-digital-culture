@@ -1,5 +1,5 @@
 ---
-title: "W7: Please Go On: Chatbots"
+title: "W7: Chatbots"
 ---
 
 *12-14 October 2026*
@@ -16,8 +16,5 @@ No class: Indigenous People's Day
 
 No assigned reading.
 
-Filter Bubble: 4
 
-***
 
-[Back to the syllabus](index)

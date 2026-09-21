@@ -150,6 +150,14 @@ plugins:
     enabled: true
     options:
       title: Pages
+      # Week pages first, in week order, then everything else alphabetically.
+      # custom.scss draws the rule between the two groups.
+      sortFn: |-
+        (a, b) => {
+          const wa = a.slugSegment.startsWith("week-"), wb = b.slugSegment.startsWith("week-")
+          if (wa !== wb) return wa ? -1 : 1
+          return (a.displayName || "").localeCompare(b.displayName || "", undefined, { numeric: true, sensitivity: "base" })
+        }
     layout:
       position: left
       priority: 50

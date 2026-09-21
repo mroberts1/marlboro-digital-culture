@@ -1,5 +1,5 @@
 ---
-title: "W13: Blockchain Media"
+title: "W13: Data Farming"
 ---
 
 *23-25 November 2026*
@@ -12,6 +12,5 @@ title: "W13: Blockchain Media"
 
 No class: Thanksgiving Break
 
-***
 
-[Back to the syllabus](index)
+

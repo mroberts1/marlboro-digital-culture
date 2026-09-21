@@ -17,8 +17,5 @@ title: "W6: Paranoid Androids"
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
-Filter Bubble: 3
 
-***
 
-[Back to the syllabus](index)

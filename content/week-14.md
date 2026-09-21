@@ -1,5 +1,5 @@
 ---
-title: "W14: True Hallucinations: Generative Images"
+title: "W14: Generative Images"
 ---
 
 *30 November-2 December 2026*
@@ -12,8 +12,4 @@ title: "W14: True Hallucinations: Generative Images"
 
 No assigned reading.
 
-Filter Bubble: 10
 
-***
-
-[Back to the syllabus](index)
