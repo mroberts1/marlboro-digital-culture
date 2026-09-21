@@ -125,7 +125,8 @@ YouTube. An image embed pointed at a watch URL becomes an iframe:
 
 Quartz emits the iframe with a fixed `width="600px"` and no wrapper.
 `custom.scss` overrides it with `width: 100%` and `aspect-ratio: 16 / 9`, so it
-scales on narrow screens. Canvas strips iframes, so this only applies to Pages.
+scales on narrow screens. Canvas keeps the iframe but not the CSS, so there it
+stays 600px wide.
 
 ## Configuration
 
@@ -234,6 +235,8 @@ Auth is the logged-in browser session driven through `agent-browser`: Canvas's
 own `/api/v1` endpoints accept the session cookie, with the `_csrf_token`
 cookie sent back as an `X-CSRF-Token` header on writes. Log in once with
 `agent-browser open --headed https://canvas.emerson.edu`, which prompts Duo.
+Export `AGENT_BROWSER_HEADED=1` for every later call in that session. A call
+without it seemed to relaunch the browser headless and close the login window.
 
 Things that cost time to find, each established by testing rather than docs:
 
