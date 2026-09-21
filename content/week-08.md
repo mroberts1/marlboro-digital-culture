@@ -12,7 +12,7 @@ title: "W8: Artificial Friends"
 
 No assigned reading.
 
-Moodboard: 6
+Filter Bubble: 5
 
 ***
 

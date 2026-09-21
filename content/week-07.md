@@ -16,7 +16,7 @@ No class: Indigenous People's Day
 
 No assigned reading.
 
-Moodboard: 5
+Filter Bubble: 4
 
 ***
 

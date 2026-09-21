@@ -12,7 +12,7 @@ title: "W14: True Hallucinations: Generative Images"
 
 No assigned reading.
 
-Moodboard: 11
+Filter Bubble: 10
 
 ***
 

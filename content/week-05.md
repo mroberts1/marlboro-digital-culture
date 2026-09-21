@@ -14,7 +14,7 @@ title: "W5: Platform Cultures"
 - BookTok
 - [TikTok Cultures Research Network](https://tiktokcultures.com/)
 
-Moodboard: 3
+Filter Bubble: 2
 
 ***
 

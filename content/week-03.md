@@ -18,8 +18,6 @@ Add/Drop Deadline
 
 - Taylor Lorenz, "[Internet 'algospeak' is changing our language in real time, from 'nip nops' to 'le dollar bean'](https://www.washingtonpost.com/technology/2022/04/08/algospeak-tiktok-le-dollar-bean/)" (*Washington Post*, 8 April 2022)
 
-Moodboard: 1
-
 ***
 
 [Back to the syllabus](index)

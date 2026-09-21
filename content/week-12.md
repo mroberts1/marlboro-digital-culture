@@ -13,7 +13,7 @@ title: "W12: Blockchain Media"
 
 - Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
-Moodboard: 10
+Filter Bubble: 9
 
 ## Friday 20 November
 

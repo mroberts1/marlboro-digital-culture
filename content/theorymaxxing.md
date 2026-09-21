@@ -3,6 +3,7 @@ title: "Theorymaxxing"
 ---
 **Internet pop theory**
 
+- anemoia
 - attention economy (Herbert A. Simon, 1971)
 - diffusion of innovations (Everett Rogers, 1962)
 - echo chamber

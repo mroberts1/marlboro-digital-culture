@@ -14,7 +14,7 @@ title: "W11: Invisible Images"
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
 - [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
-Moodboard: 9
+Filter Bubble: 8
 
 ## Wednesday 11 November
 
