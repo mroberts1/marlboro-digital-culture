@@ -179,8 +179,6 @@ W, Sept. 16: Add/Drop Deadline
 - Emma Madden, "More Typos, Fewer Em Dashes: Writers Are Creating an Anti-AI 'Literary Counterculture'" (*WIRED*, 29 July 2026)
 - Taylor Lorenz, “[Internet ‘algospeak’ is changing our language in real time, from ‘nip nops’ to ‘le dollar bean’](https://www.washingtonpost.com/technology/2022/04/08/algospeak-tiktok-le-dollar-bean/)” (*Washington Post*, 8 April 2022)
 
-Moodboard: 1
-
 ### Week 4
 
 **Girlhood: Out of Body Experiences**
@@ -197,7 +195,7 @@ W, Sept. 23
 - Alex Quicho, “[Everyone is a Girl Online](https://www.wired.com/story/girls-online-culture/)” (*WIRED*, 11 September 2023) \[[pdf](pdf/alex-quicho-girl-online.pdf)\]
 - Emma Copley Eisenberg, “[Notes on Frump: A Style for the Rest of Us](https://www.heyalma.com/notes-on-frump-a-style-for-the-rest-of-us/)” (_heyalma_, 10 August 2017)
 
-Moodboard: 2
+Filter Bubble: 1
 
 ### Week 5
 
@@ -213,7 +211,7 @@ W, Sept. 30
 - BookTok
 - [TikTok Cultures Research Network](https://tiktokcultures.com/)
 
-Moodboard: 3
+Filter Bubble: 2
 
 ### Week 6
 
@@ -233,7 +231,7 @@ W, Oct. 7
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up)(1878)
 
-Moodboard: 4
+Filter Bubble: 3
 
 ### Week 7
 
@@ -247,7 +245,7 @@ Tu, Oct. 13
 
 W, Oct. 14 
 
-Moodboard: 5
+Filter Bubble: 4
 
 ### Week 8
 
@@ -259,7 +257,7 @@ M, Oct. 19
 
 W, Oct. 21
 
-Moodboard: 6
+Filter Bubble: 5
 
 ### Week 9
 
@@ -274,7 +272,7 @@ W, Oct. 28
 - Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
 - Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
 
-Moodboard: 7
+Filter Bubble: 6
 
 ### Week 10
 
@@ -290,7 +288,7 @@ W, Nov. 4
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
 - Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
-Moodboard: 8
+Filter Bubble: 7
 
 ### Week 11
 
@@ -306,7 +304,7 @@ T, Nov 10
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
 - [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
-Moodboard: 9
+Filter Bubble: 8
 
 W, Nov. 11: NO CLASS: Veterans' Day
 
@@ -323,7 +321,7 @@ W, Nov. 18
 
 - Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
-Moodboard: 10
+Filter Bubble: 9
 
 F, Nov. 20: WP/WF deadline
 
@@ -345,7 +343,7 @@ Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
 
 W, Dec. 2
 
-Moodboard: 11
+Filter Bubble: 10
 
 ### Week 15
 
