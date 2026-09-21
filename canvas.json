@@ -27,6 +27,14 @@
       "title": "Banned Words"
     },
     {
+      "source": "t-shirts",
+      "title": "T-Shirt Ideas"
+    },
+    {
+      "source": "attendance-policy",
+      "title": "Attendance Policy"
+    },
+    {
       "source": "rur-intro",
       "title": "Introduction: R.U.R. and the Vision of Artificial Life",
       "nav": false
