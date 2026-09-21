@@ -1,0 +1,45 @@
+#!/bin/bash
+# Log the agent-browser session into Canvas, through Emerson's two-step SSO.
+#
+# Emerson's sign-on asks for the email address first and only shows the
+# password field on the next page, so `agent-browser auth login` cannot do it:
+# it fills one form and gives up. The password comes from the login keychain,
+# never from a file in this repo. Store it once with:
+#
+#     security add-generic-password -s canvas-emerson -a martin_roberts@emerson.edu -w
+#
+# Duo still prompts on your phone; approve it, and the session then lasts a few
+# hours. Everything else in script/canvas assumes this has been run.
+set -e
+
+ACCOUNT="martin_roberts@emerson.edu"
+BASE="https://canvas.emerson.edu"
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+if agent-browser open "$BASE" >/dev/null 2>&1 &&
+   [[ "$(agent-browser get url)" == "$BASE"/* ]]; then
+  echo "already logged in"
+  exit 0
+fi
+
+password=$(security find-generic-password -s canvas-emerson -a "$ACCOUNT" -w) || {
+  echo "no keychain item 'canvas-emerson'. Store it with:" >&2
+  echo "  security add-generic-password -s canvas-emerson -a $ACCOUNT -w" >&2
+  exit 1
+}
+
+agent-browser fill 'input[type=email], input[name=email]' "$ACCOUNT"
+agent-browser find role button Next click
+agent-browser wait 'input[type=password]'
+agent-browser fill 'input[type=password]' "$password"
+agent-browser find role button "Log in" click
+
+echo "approve the Duo prompt on your phone; waiting..."
+for _ in $(seq 60); do
+  sleep 5
+  [[ "$(agent-browser get url)" == "$BASE"/* ]] && { echo "logged in"; exit 0; }
+done
+
+echo "still not on Canvas: $(agent-browser get url)" >&2
+exit 1

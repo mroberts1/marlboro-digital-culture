@@ -123,8 +123,9 @@ YouTube. An image embed pointed at a watch URL becomes an iframe:
 ![](https://www.youtube.com/watch?v=VIDEO_ID)
 ```
 
-The iframe is a fixed `width="600px"` with no aspect-ratio rule, so it does not
-scale on narrow screens. No responsive CSS exists for it yet in any vault here.
+Quartz emits the iframe with a fixed `width="600px"` and no wrapper.
+`custom.scss` overrides it with `width: 100%` and `aspect-ratio: 16 / 9`, so it
+scales on narrow screens. Canvas strips iframes, so this only applies to Pages.
 
 ## Configuration
 
@@ -211,15 +212,19 @@ next push overwrites it.
 
     script/canvas syllabus   index.md to syllabus_body
     script/canvas pages      the content pages listed in canvas.json
-    script/canvas home       front page: cover table plus a nav line
+    script/canvas home       front page: cover table, page links, a rule, week links
     script/canvas all        all three
     --print                  write the HTML locally, push nothing
-    --publish                publish content pages instead of leaving drafts
+
+Everything pushed is published. Nothing on Canvas is a draft: drafting happens
+in the vault.
 
 Readings are listed in both `index.md` and the week pages. When pushing a week
 page, check whether `index.md` changed too, and if so push `syllabus` as well.
 
 Course id, site url, page list and cover image live in `canvas.json`.
+Set `"nav": false` on a page to keep it off the homepage links. Pages whose
+source is `week-NN` are listed separately as "Week N".
 A page's `source` is the Quartz slug, which is lowercased: `rur-intro` for
 `RUR-intro.md`. A mismatch prints `SKIPPED (no content/X.md)` even though the file exists.
 Generated `canvas-*.html` files are build artifacts and gitignored.

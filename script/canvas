@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Render content/index.md into Canvas-ready HTML and push it.
 
-    python3 script/canvas              # push to the draft page in canvas.json
-    python3 script/canvas --print      # write the HTML locally, push nothing
-    python3 script/canvas --syllabus   # push to the course syllabus_body
+    python3 script/canvas syllabus         # push to the course syllabus_body
+    python3 script/canvas pages            # push the content pages in canvas.json
+    python3 script/canvas home --print     # write the HTML locally, push nothing
+
+Everything pushed is published. Drafting happens in the vault, not on Canvas.
 
 Canvas is an OUTPUT, like the Pages site and the PDF. The vault is the source.
 Editing the generated page inside Canvas means the next push overwrites it.
@@ -309,7 +311,7 @@ def push_syllabus(html, cfg):
     return browser_eval(js)
 
 
-def push_page(html, cfg, title, published=False):
+def push_page(html, cfg, title):
     """Update the page with this exact title, or create it.
 
     Looked up by title, not slug: Canvas derives the slug from the title, so
@@ -328,7 +330,7 @@ def push_page(html, cfg, title, published=False):
   const list = await (await fetch('/api/v1/courses/{cfg["course_id"]}/pages?per_page=100',
     {{headers:{{Accept:'application/json'}},credentials:'same-origin'}})).json();
   const hit = list.find(p => p.title === TITLE);
-  const payload = JSON.stringify({{wiki_page:{{title:TITLE, body: body, published:{str(published).lower()}}}}});
+  const payload = JSON.stringify({{wiki_page:{{title:TITLE, body: body, published:true}}}});
   const r = hit
     ? await fetch('/api/v1/courses/{cfg["course_id"]}/pages/' + encodeURIComponent(hit.url),
         {{method:'PUT', credentials:'same-origin', headers:H, body: payload}})
@@ -345,16 +347,13 @@ def push_page(html, cfg, title, published=False):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("target", nargs="?", default="draft",
-                    choices=["draft", "syllabus", "pages", "home", "all"],
-                    help="draft (default): index.md to the draft page; "
-                         "syllabus: index.md to syllabus_body; "
+    ap.add_argument("target",
+                    choices=["syllabus", "pages", "home", "all"],
+                    help="syllabus: index.md to syllabus_body; "
                          "pages: the configured content pages; "
                          "home: the front page; all: everything")
     ap.add_argument("--print", action="store_true", dest="only_print",
                     help="write the HTML locally and push nothing")
-    ap.add_argument("--publish", action="store_true",
-                    help="publish content pages instead of leaving them as drafts")
     args = ap.parse_args()
 
     if not CONFIG.exists():
@@ -382,7 +381,7 @@ def main():
     want = {"all": {"syllabus", "pages", "home"}}.get(args.target, {args.target})
 
     # index.md, with the two-column cover/details table
-    if want & {"draft", "syllabus", "home"}:
+    if want & {"syllabus", "home"}:
         html, notes, parts = transform(built["index"], cfg,
                                        upload=not args.only_print)
         (VAULT / "canvas-syllabus.html").write_text(html)
@@ -403,7 +402,7 @@ def main():
                 (VAULT / f"canvas-{src}.html").write_text(page_html)
                 print(f"  {spec['title']:34} -> canvas-{src}.html ({len(page_html):,} chars)")
             else:
-                report(push_page(page_html, cfg, spec["title"], published=args.publish),
+                report(push_page(page_html, cfg, spec["title"]),
                        spec["title"])
 
     if "home" in want:
@@ -413,14 +412,21 @@ def main():
             sys.exit("could not extract the cover and details for the homepage")
         cid = cfg["course_id"]
         nav = [f'<a href="/courses/{cid}/assignments/syllabus">Syllabus</a>']
+        weeks = []
         slugs = {} if args.only_print else page_slugs(cfg)
         missing = []
         for spec in cfg.get("pages", []):
+            if not spec.get("nav", True):
+                continue
             slug = slugs.get(spec["title"])
             if slug is None:
                 missing.append(spec["title"])
                 slug = re.sub(r"[^a-z0-9]+", "-", spec["title"].lower()).strip("-")
-            nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
+            week = re.fullmatch(r"week-0*(\d+)", spec["source"])
+            if week:
+                weeks.append(f'<a href="/courses/{cid}/pages/{slug}">Week {week.group(1)}</a>')
+            else:
+                nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
         if missing:
             print(f"  note: not on Canvas yet, slug guessed for: {', '.join(missing)}")
         # Full width, not the syllabus table: Canvas's course-home content
@@ -432,22 +438,19 @@ def main():
             f'<p><span style="font-size: 8pt;">{parts["caption"]}</span></p>\n'
             f'<p>{parts["heading"]}</p>\n{parts["details"]}\n'
             + "<p>" + " | ".join(nav) + "</p>"
+            + ("\n<hr>\n<p>" + " | ".join(weeks) + "</p>" if weeks else "")
         )
         if args.only_print:
             (VAULT / "canvas-home.html").write_text(home)
             print(f"\nhome -> canvas-home.html ({len(home):,} chars)")
         else:
             print("\nhomepage:")
-            report(push_page(home, cfg, cfg["home_title"], published=True),
+            report(push_page(home, cfg, cfg["home_title"]),
                    cfg["home_title"])
 
     if "syllabus" in want and not args.only_print:
         print("\nsyllabus:")
         report(push_syllabus(html, cfg), "syllabus_body")
-
-    if "draft" in want and not args.only_print:
-        print("\ndraft:")
-        report(push_page(html, cfg, cfg["draft_title"]), cfg["draft_title"])
 
 
 if __name__ == "__main__":

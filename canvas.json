@@ -2,7 +2,6 @@
   "base_url": "https://canvas.emerson.edu",
   "course_id": 2196805,
   "site_url": "https://mroberts1.github.io/marlboro-digital-culture",
-  "draft_title": "Syllabus (draft from vault)",
   "cover_image_url": "https://canvas.emerson.edu/courses/2196805/files/196277997/preview?location=course_syllabus_2196805",
   "cover_width": 640,
   "cover_height": 427,
@@ -29,7 +28,8 @@
     },
     {
       "source": "rur-intro",
-      "title": "Introduction: R.U.R. and the Vision of Artificial Life"
+      "title": "Introduction: R.U.R. and the Vision of Artificial Life",
+      "nav": false
     },
     {
       "source": "week-03",
