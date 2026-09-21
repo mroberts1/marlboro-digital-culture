@@ -194,7 +194,7 @@ M, Sept. 21
 
 W, Sept. 23
 
-- Alex Quicho, “[Everyone is a Girl Online](https://www.wired.com/story/girls-online-culture/)” (*WIRED*, 11 September 2023)
+- Alex Quicho, “[Everyone is a Girl Online](https://www.wired.com/story/girls-online-culture/)” (*WIRED*, 11 September 2023) \[[pdf](pdf/alex-quicho-girl-online.pdf)\]
 - Emma Copley Eisenberg, “[Notes on Frump: A Style for the Rest of Us](https://www.heyalma.com/notes-on-frump-a-style-for-the-rest-of-us/)” (_heyalma_, 10 August 2017)
 
 Moodboard: 2
