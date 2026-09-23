@@ -10,6 +10,4 @@ title: "Attendance Policy"
 
 4. For 2 or more consecutive absences due to illness, a doctor's note is required. 
 
-5. Please arrive for class on time and do not leave before class is dismissed without asking my permission. Arrivals more than 10 minutes late or departures 10 minutes before class ends are noted as Late and 3 Lates count as one Absent.
-
-***
+5. Please arrive for class on time and do not leave before class ends without asking my permission. Arrivals more than 10 minutes late or departures 10 minutes before class ends are noted as Late and 3 Lates count as one Absent.

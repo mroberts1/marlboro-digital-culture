@@ -7,12 +7,11 @@ title: "Dystopian Zeitgeist"
 - agent
 - AI-slop
 - algospeak
+- aspirational
 - attention-cycle
 - aura-farming
 - brain-rot
-- BRAT
 - chad
-- chatbot
 - destigmatization
 - facetuning
 - filter-bubble
@@ -24,7 +23,8 @@ title: "Dystopian Zeitgeist"
 - post-ironic
 - ragebait
 - red-flag
-- side-eye
+- ring-light
+- soft-launch
 - vibe-coding
 - zoomergaze
 
