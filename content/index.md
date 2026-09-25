@@ -203,7 +203,7 @@ Filter Bubble: 1
 
 M, Sept. 28
 
-- Freya India, "[Opinions"; "Exposed](pdf/freya-india-opinions-exposed.pdf)" (from *Girls®,* ch. 3, "Documented")
+- Freya India, ["Opinions"; "Exposed"](pdf/freya-india-opinions-exposed.pdf) (from *Girls®,* ch. 3, "Documented")
 
 W, Sept. 30
 
