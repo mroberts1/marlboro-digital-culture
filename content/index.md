@@ -231,9 +231,9 @@ M, Oct. 5
 
 W, Oct. 7
 
-- [Robbie](pdf/asimov-robbie.pdf)(Isaac Asimov, 1940)
-- [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
-- Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up)(1878)
+- [Robbie](pdf/asimov-robbie.pdf) (Isaac Asimov, 1940)
+- [Robbie](https://en.wikipedia.org/wiki/Robbie_) (short_story) (Wikipedia)
+- Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
 Filter Bubble: 3
 
