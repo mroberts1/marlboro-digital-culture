@@ -199,13 +199,17 @@ Filter Bubble: 1
 
 ### Week 5
 
-**Platform Cultures**
+
 
 M, Sept. 28
 
-- Crystal Abidin, *TikTok Cultures* (chs. TBA)
+- Freya India, "[Opinions"; "Exposed](pdf/freya-india-opinions-exposed.pdf)" (from *Girls®,* ch. 3, "Documented")
 
 W, Sept. 30
+
+**Platform Cultures**
+
+- Crystal Abidin, *TikTok Cultures* (chs. TBA)
 
 - Queline Meadows, "The Rise of Film TikTok"
 - BookTok

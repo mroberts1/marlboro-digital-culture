@@ -2,8 +2,6 @@
 title: "W5: Platform Cultures"
 ---
 
-*28-30 September 2026*
-
 ## Monday 28 September
 
 - Crystal Abidin, *TikTok Cultures* (chs. TBA)

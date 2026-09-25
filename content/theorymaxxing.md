@@ -11,6 +11,6 @@ title: "Theorymaxxing"
 - engagement treadmill
 - filter bubble
 - Matthew Effect
-- online disinhibition effect
+- disinhibition effect
 - over-attribution
 - Poe's Law
