@@ -8,7 +8,7 @@ OA: Open Access
 
 [Crystal Abidin](https://wishcrys.com), *TikTok and Youth Cultures*. SocietyNow series. Leeds, UK: Emerald Publishing, 2025.
 
-A: *Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
+A: *Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
 
 danah boyd, *It's Complicated: The Social Lives of Networked Teens* (New Haven: Yale University Press, 2014).
 
@@ -16,7 +16,7 @@ Amy Bruckman, *Should You Believe Wikipedia? Online Communities and the Construc
 
 Finn Brunton and Helen Nissenbaum, *Obfuscation: A User's Guide for Privacy and Protest* (Cambridge: MIT Press, 2016).
 
-Jitka Čejková, ed., [*R.U.R. and the Vision of Artificial Life*](https://mitpress.mit.edu/9780262544504/r-u-r-and-the-vision-of-artificial-life/)(Cambridge: MIT Press, 2024).
+Jitka Čejková, ed., [*R.U.R. and the Vision of Artificial Life*](https://mitpress.mit.edu/9780262544504/r-u-r-and-the-vision-of-artificial-life/) (Cambridge: MIT Press, 2024).
 
 Kyle Chayka, *Filterworld: How Algorithms Flattened Culture* (New York: Doubleday, 2024).
 
@@ -32,7 +32,7 @@ Adrian Hon, *You've Been Played: How Corporations, Governments, and Schools Use 
 
 A/E: *[Freya India](https://www.freyaindia.co.uk/), *GIRLS®: Generation Z and the Commodification of Everything*. New York: MacMillan Books, 2026.
 
-A/E: *Kazuo Ishiguro, [*Klara and the Sun: A Novel*](https://www.penguinrandomhouse.com/books/653825/klara-and-the-sun-a-gma-book-club-pick-by-kazuo-ishiguro). New York: Penguin Random House, 2022.
+A/E: *Kazuo Ishiguro, [*Klara and the Sun: A Novel*](https://www.penguinrandomhouse.com/books/653825/klara-and-the-sun-a-gma-book-club-pick-by-kazuo-ishiguro). New York: Penguin Random House, 2022.
 
 Sarah J. Jackson, Moya Bailey, et al., *#Hashtag Activism: Networks of Race and Gender Justice* (Cambridge: MIT Press, 2020).
 
@@ -44,7 +44,7 @@ A/E: [Christine Lagorio-Chafkin](https://x.com/lagorio), *We Are the Nerds: The 
 
 A/E: Taylor Lorenz, *Extremely Online: How the Internet Changed the Way We Live, Love, Work, and Play* (New York: Simon & Schuster, 2022}.
 
-OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
+OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
 
 A/E: Gary Marcus & Ernest Davis, *Rebooting AI: Building Artificial Intelligence We Can Trust* (New York: Pantheon Books, 2019).
 
@@ -64,7 +64,7 @@ Whitney Phillips, *This Is Why We Can't Have Nice Things: Mapping the Relationsh
 
 Whitney Phillips and Ryan M. Milner, *You Are Here: A Field Guide for Navigating Polarized Speech, Conspiracy Theories, and Our Polluted Media Landscape* (Cambridge: MIT Press, 2021).
 
-[Allissa V. Richardson](https://allissavrichardson.com/), *Bearing Witness While Black: African Americans, Smartphones, and the New Protest \#Journalism*. Oxford: Oxford University Press, 2020.
+[Allissa V. Richardson](https://allissavrichardson.com/), *Bearing Witness While Black: African Americans, Smartphones, and the New Protest \#Journalism*. Oxford: Oxford University Press, 2020.
 
 E: Hito Steyerl, *Medium Hot: Images in the Age of Heat*. London: Verso, 2026.
 

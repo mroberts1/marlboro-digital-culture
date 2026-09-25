@@ -7,7 +7,7 @@ title: "W6: Paranoid Androids"
 ## Monday 5 October
 
 - John Jordan, "Robots in Popular Culture" (*Robots*, ch. 3)
-- Jitka Čejková, ed., "[Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life)," [*R.U.R. and the Vision of Artificial Life*](https://mitpress.mit.edu/9780262544504/r-u-r-and-the-vision-of-artificial-life/)(Cambridge: MIT Press, 2024).
+- Jitka Čejková, ed., "[Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life)," [*R.U.R. and the Vision of Artificial Life*](https://mitpress.mit.edu/9780262544504/r-u-r-and-the-vision-of-artificial-life/) (Cambridge: MIT Press, 2024).
 - [Robot100 website](https://www.robot100.cz/rur)
 - Karel Čapek, [*R.U.R.*](pdf/R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf)
 

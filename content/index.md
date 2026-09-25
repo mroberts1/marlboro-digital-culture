@@ -75,7 +75,7 @@ OA: Open Access
 
 - [Crystal Abidin](https://wishcrys.com), *TikTok and Youth Cultures*. SocietyNow series. Leeds, UK: Emerald Publishing, 2025.
 
-- A: Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
+- A: Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
 
 - OA: Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, [*Inventing ELIZA: How The First Chatbot Shaped the Future of AI*](https://direct.mit.edu/books/oa-monograph/6171/Inventing-ELIZAHow-the-First-Chatbot-Shaped-the). MA: MIT Press, 2026.
 
@@ -86,7 +86,7 @@ OA: Open Access
 - E: [Bogna Konior](https://bognamk.com/), [*The Dark Forest Theory of the Internet*](https://www.politybooks.com/bookdetail?book_slug=the-dark-forest-theory-of-the-internet--9781509569250). Cambridge: Polity Press, 2026.
 - \---, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf). Pittsburg and New York: Flugschriften, 2020.
 
-- OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
+- OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
  
 - Dominic Pettman, *Ghosting: On Disappearance*. Cambridge: Polity Press, 2025.
 
@@ -101,8 +101,8 @@ OA: Open Access
 
 ### Substack Blogs
 
-- [GIRLS](https://www.freyaindia.co.uk/) (Freya India)
-- [_Internal Exile_](https://robhorning.substack.com/) (Rob Horning)
+- [GIRLS](https://www.freyaindia.co.uk/) (Freya India)
+- [_Internal Exile_](https://robhorning.substack.com/) (Rob Horning)
 - [Jenka Gurfinkel](https://substack.com/@jenka?utm_source=top-search)
 - [Gary Marcus](https://substack.com/@garymarcus?utm_source=top-search) 
 
@@ -233,7 +233,7 @@ W, Oct. 7
 
 - [Robbie](pdf/asimov-robbie.pdf) (Isaac Asimov, 1940)
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
-- Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
+- Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
 Filter Bubble: 3
 
@@ -273,8 +273,8 @@ M, Oct. 26
 
 W, Oct. 28
 
-- Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
-- Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
+- Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
+- Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
 
 Filter Bubble: 6
 
@@ -306,7 +306,7 @@ T, Nov 10
 
 - [Trevor Paglen](https://paglen.studio/), "[Invisible Images (Your Pictures Are Looking At You)](https://thenewinquiry.com/invisible-images-your-pictures-are-looking-at-you/)" (_The New Inquiry_, 8 December 2016)
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
-- [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
+- [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
 Filter Bubble: 8
 
