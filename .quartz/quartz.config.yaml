@@ -15,17 +15,17 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: Helvetica Neue
-      body: Helvetica Neue
-      code: Helvetica Neue
+      header: neue-haas-unica
+      body: neue-haas-unica
+      code: neue-haas-unica
     colors:
-      # letterpress palette from jzhao.xyz: navy ink + vermilion on warm paper
+      # e-flux.com: near-black #101010 on white, #e6e6e6 rules, #666 grey
       lightMode:
-        light: "#f5eedd"
-        lightgray: "#e3d9c0"
-        gray: "#9a8e76"
-        darkgray: "#2d4673"
-        dark: "#16294e"
+        light: "#ffffff"
+        lightgray: "#e6e6e6"
+        gray: "#666666"
+        darkgray: "#101010"
+        dark: "#101010"
         secondary: "#284d78"
         tertiary: "#c8482b"
         highlight: rgba(200, 72, 43, 0.1)
@@ -109,9 +109,9 @@ plugins:
     enabled: true
     options:
       fontOrigin: local
-      header: Helvetica Neue
-      body: Helvetica Neue
-      code: Helvetica Neue
+      header: neue-haas-unica
+      body: neue-haas-unica
+      code: neue-haas-unica
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -131,7 +131,7 @@ plugins:
   - source: "@quartz-community/favicon"
     enabled: true
   # Off: it fetches theme.typography families from Google Fonts to draw social
-  # cards, and Helvetica Neue is not on Google Fonts, so the build fails with
+  # cards, and Neue Haas Unica is not on Google Fonts, so the build fails with
   # "Failed to emit from plugin CustomOgImages". Social cards are not wanted
   # here, so the emitter goes rather than the font.
   - source: "@quartz-community/og-image"

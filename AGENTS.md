@@ -148,9 +148,16 @@ Everything the YAML cannot express lives in `.quartz/quartz/styles/custom.scss`:
 the self-hosted font, a tighter heading scale, wrapped code blocks, a card grid
 for folder listings, and the `[!custom]` callout.
 
-Helvetica Neue is the header, body and code face, set in `quartz.config.yaml`
-with `fontOrigin: local` because it is a system face rather than a Google font.
-The fallback stack for machines without it lives in `custom.scss`, which is
+Neue Haas Unica (Adobe Fonts kit `ejl5bmc`) is the header, body and code face,
+after e-flux.com, with a white and `#101010` light palette and a type scale at
+75% of e-flux's. The family is `neue-haas-unica`, set in `quartz.config.yaml`
+with `fontOrigin: local` because it is not a Google font. Its `@font-face` rules
+are copied into `custom.scss` from `https://use.typekit.net/ejl5bmc.css`: a CSS
+`@import` of the kit fails the build ("@import rules must precede all rules"),
+because Quartz concatenates `custom.scss` after other CSS. Re-copy them if the
+kit's font list changes, and keep the site's domains on the Adobe Fonts web
+project. The fallback stack (Helvetica Neue, Helvetica, Arial) lives in
+`custom.scss`, which is
 unlayered and so outranks the bare family the quartz-fonts plugin emits. That
 plugin also hard-sets `h1..h6` unlayered, from a stylesheet loaded after
 `custom.scss`, so the heading override there is prefixed with `body` to win on

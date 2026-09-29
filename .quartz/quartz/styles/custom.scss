@@ -1,5 +1,155 @@
 @use "./variables.scss" as *;
 
+// Neue Haas Unica from Adobe Fonts (kit ejl5bmc). A CSS @import of the kit
+// breaks the SCSS build ("@import rules must precede all rules": Quartz
+// concatenates this file after other CSS), so its @font-face rules are copied
+// here. Browsers only fetch the faces a page uses. If the kit's font list
+// changes in Adobe Fonts, re-copy from https://use.typekit.net/ejl5bmc.css.
+// Adobe serves these only to domains listed on the web project.
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/09a366/00000000000000007735bb30/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff2"),url("https://use.typekit.net/af/09a366/00000000000000007735bb30/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("woff"),url("https://use.typekit.net/af/09a366/00000000000000007735bb30/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i1&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/1e7289/00000000000000007735bb2f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/1e7289/00000000000000007735bb2f/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/1e7289/00000000000000007735bb2f/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/670652/00000000000000007735bb2d/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff2"),url("https://use.typekit.net/af/670652/00000000000000007735bb2d/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("woff"),url("https://use.typekit.net/af/670652/00000000000000007735bb2d/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i2&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/67cf4d/00000000000000007735bb2c/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/67cf4d/00000000000000007735bb2c/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/67cf4d/00000000000000007735bb2c/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/dfcdaa/00000000000000007735bb21/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"),url("https://use.typekit.net/af/dfcdaa/00000000000000007735bb21/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"),url("https://use.typekit.net/af/dfcdaa/00000000000000007735bb21/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/53408e/00000000000000007735bb1e/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/53408e/00000000000000007735bb1e/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/53408e/00000000000000007735bb1e/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/81e838/00000000000000007735bb1b/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/81e838/00000000000000007735bb1b/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/81e838/00000000000000007735bb1b/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/404934/00000000000000007735bb2a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/cf593f/00000000000000007735bb27/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/cf593f/00000000000000007735bb27/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/cf593f/00000000000000007735bb27/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/2a851a/00000000000000007735bb24/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/2a851a/00000000000000007735bb24/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/2a851a/00000000000000007735bb24/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/91f25c/00000000000000007735bb0a/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/91f25c/00000000000000007735bb0a/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/91f25c/00000000000000007735bb0a/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/deedd5/00000000000000007735bb07/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/deedd5/00000000000000007735bb07/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/deedd5/00000000000000007735bb07/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/900894/00000000000000007735bb17/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/900894/00000000000000007735bb17/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/900894/00000000000000007735bb17/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/98fb6b/00000000000000007735bb14/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/762099/00000000000000007735bb04/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff2"),url("https://use.typekit.net/af/762099/00000000000000007735bb04/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff"),url("https://use.typekit.net/af/762099/00000000000000007735bb04/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/4a8091/00000000000000007735bb02/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/847aeb/00000000000000007735bb11/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff2"),url("https://use.typekit.net/af/847aeb/00000000000000007735bb11/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff"),url("https://use.typekit.net/af/847aeb/00000000000000007735bb11/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue-haas-unica";
+  src: url("https://use.typekit.net/af/3adf0f/00000000000000007735bb0e/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/3adf0f/00000000000000007735bb0e/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/3adf0f/00000000000000007735bb0e/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
 // ---------------------------------------------------------------------------
 // Plastic Labs theme
 // Palette, type scale and callout extras reproduced from
@@ -16,7 +166,7 @@
 // 404 on GitHub Pages project sites, which are served from /<repo>/ — and the
 // breakage is invisible on any machine that has Departure Mono installed
 // locally, because the system font satisfies the family name.
-// Currently unused: the site is set to Helvetica Neue in quartz.config.yaml.
+// Currently unused: the site is set to Neue Haas Unica in quartz.config.yaml.
 // Kept, with the font files, so switching back is a config change alone. An
 // unreferenced @font-face costs nothing; browsers only fetch a face when
 // something asks for it.
@@ -34,12 +184,11 @@
   --customCallout: var(--highlight);
   --searchBackground: #d3d3d3;
 
-  // Helvetica Neue ships with macOS and iOS but not with Windows or most Linux
-  // installs, so it needs a real fallback stack. The quartz-fonts plugin emits
-  // a bare family name; these are what the browser uses.
-  --headerFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --bodyFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --codeFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // Neue Haas Unica is declared by the @font-face rules at the top. The
+  // quartz-fonts plugin emits a bare family name; these add the fallback stack.
+  --headerFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bodyFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --codeFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root[saved-theme="dark"] {
@@ -47,8 +196,15 @@
   --searchBackground: #252525;
 }
 
+// Typography after e-flux.com: Neue Haas Unica at 15px (0.9375rem, 75% of
+// e-flux's 20px; the rem-based layout is untouched), line-height 1.3, proportional
+// figures, bold headings at 2.5 / 1.5 / 1.334 times the body size.
 body {
-  font-size: 0.86rem;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  font-feature-settings: "pnum";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // The quartz-fonts plugin emits its own `h1, h2, ... { font-family: <family> }`
@@ -66,20 +222,31 @@ body h6 {
   font-family: var(--headerFont);
 }
 
-// Plastic Labs runs a tighter heading scale than Quartz ships with.
 h1 {
-  font-size: 1.58rem;
+  font-size: 2.344rem;
+  line-height: 1.1;
 }
 h2 {
-  font-size: 1.26rem;
+  font-size: 1.406rem;
+  line-height: 1.1;
 }
 h3 {
-  font-size: 1.01rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 h4,
 h5,
 h6 {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 700;
 }
 
 input[type="search"] {
