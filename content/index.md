@@ -75,13 +75,13 @@ OA: Open Access
 
 - [Crystal Abidin](https://wishcrys.com), *TikTok and Youth Cultures*. SocietyNow series. Leeds, UK: Emerald Publishing, 2025.
 
-- A: Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
+- A: Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf, 2025.
 
 - OA: Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, [*Inventing ELIZA: How The First Chatbot Shaped the Future of AI*](https://direct.mit.edu/books/oa-monograph/6171/Inventing-ELIZAHow-the-First-Chatbot-Shaped-the). MA: MIT Press, 2026.
 
 - A/E: [Freya India](https://www.freyaindia.co.uk/), *GIRLS®: Generation Z and the Commodification of Everything*. New York: MacMillan Books, 2026.
 
-- John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series.
+- John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series, 2016.
 
 - E: [Bogna Konior](https://bognamk.com/), [*The Dark Forest Theory of the Internet*](https://www.politybooks.com/bookdetail?book_slug=the-dark-forest-theory-of-the-internet--9781509569250). Cambridge: Polity Press, 2026.
 - \---, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf). Pittsburg and New York: Flugschriften, 2020.
@@ -209,7 +209,11 @@ W, Sept. 30
 
 **Platform Cultures**
 
-- Crystal Abidin, *TikTok Cultures* (chs. TBA)
+- Crystal Abidin, *TikTok Cultures*:
+- - "[Preface](pdf/crystal-abidin-tiktok-preface.pdf)"
+- - "[Appendix]((pdf/crystal-abidin-tiktok-appendix.pdf))"
+- - "[Platform Wars]((pdf/crystal-abidin-platform-wars.pdf))" (from ch. 1)
+- - "[Memes and Capital]((pdf/crystal-abidin-memes-capital.pdf))" (ch. 3)
 
 - Queline Meadows, "The Rise of Film TikTok"
 - BookTok

@@ -20,7 +20,7 @@ title: "Dystopian Zeitgeist"
 - gooning
 - looksmaxxing
 - mogging
-- post-ironic
+- oversharing
 - ragebait
 - red-flag
 - ring-light

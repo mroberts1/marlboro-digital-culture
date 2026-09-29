@@ -8,7 +8,7 @@ OA: Open Access
 
 [Crystal Abidin](https://wishcrys.com), *TikTok and Youth Cultures*. SocietyNow series. Leeds, UK: Emerald Publishing, 2025.
 
-A: *Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf.
+A: *Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf, 2025.
 
 danah boyd, *It's Complicated: The Social Lives of Networked Teens* (New Haven: Yale University Press, 2014).
 
@@ -36,7 +36,7 @@ A/E: *Kazuo Ishiguro, [*Klara and the Sun: A Novel*](https://www.penguinrandomho
 
 Sarah J. Jackson, Moya Bailey, et al., *#Hashtag Activism: Networks of Race and Gender Justice* (Cambridge: MIT Press, 2020).
 
-John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series.
+John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series, 2016.
 
 E: Bogna Konior, *The Dark Forest Theory of the Internet*. Cambridge: Polity Press, 2026.
 
