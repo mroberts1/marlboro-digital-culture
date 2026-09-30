@@ -150,6 +150,24 @@
   font-display: swap;
 }
 
+// Changeling Neo from Adobe Fonts (kit vqx0msf), headings only. Copied for the
+// same @import reason as above; re-copy from https://use.typekit.net/vqx0msf.css.
+@font-face {
+  font-family: "changeling-neo";
+  src: url("https://use.typekit.net/af/7fbe77/00000000000000007735da4d/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/7fbe77/00000000000000007735da4d/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/7fbe77/00000000000000007735da4d/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "changeling-neo";
+  src: url("https://use.typekit.net/af/ac74ae/00000000000000007735da62/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/ac74ae/00000000000000007735da62/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/ac74ae/00000000000000007735da62/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 // ---------------------------------------------------------------------------
 // Plastic Labs theme
 // Palette, type scale and callout extras reproduced from
@@ -186,7 +204,7 @@
 
   // Neue Haas Unica is declared by the @font-face rules at the top. The
   // quartz-fonts plugin emits a bare family name; these add the fallback stack.
-  --headerFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --headerFont: "changeling-neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --bodyFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --codeFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

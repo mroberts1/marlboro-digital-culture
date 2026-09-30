@@ -15,7 +15,7 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: neue-haas-unica
+      header: changeling-neo
       body: neue-haas-unica
       code: neue-haas-unica
     colors:
@@ -109,7 +109,7 @@ plugins:
     enabled: true
     options:
       fontOrigin: local
-      header: neue-haas-unica
+      header: changeling-neo
       body: neue-haas-unica
       code: neue-haas-unica
   - source: "@quartz-themes/core"
