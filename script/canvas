@@ -73,6 +73,15 @@ def transform(html, cfg, with_table=True, upload=False):
 
     video_to_img.posterised = video_to_img.kept = 0
     a, _ = re.subn(r"<video.*?</video>", video_to_img, a, flags=re.S)
+
+    # Quartz emits YouTube iframes at width="600px" with no height, and Canvas
+    # strips the CSS that scales them. Pin them to 640x320.
+    a = re.sub(
+        r'(<iframe\b[^>]*?)\s+width="[^"]*"([^>]*>)',
+        r'\1\2',
+        a,
+    )
+    a = re.sub(r"<iframe\b", '<iframe width="640px" height="320px"', a)
     if video_to_img.posterised:
         notes.append(f"replaced {video_to_img.posterised} <video> with its poster image")
     if video_to_img.kept:
