@@ -14,3 +14,6 @@ title: "Theorymaxxing"
 - disinhibition effect
 - over-attribution
 - Poe's Law
+- refracted publics (Crystal Abidin)
+- silosociality  (Crystal Abidin)
+- social steganography (Crystal Abidin)

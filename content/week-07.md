@@ -1,20 +1,19 @@
 ---
-title: "W7: Chatbots"
+title: "W7: Paranoid Androids"
 ---
-
-![](pdf/eliza-doctor.pdf)
 
 ## Monday 12 October
 
 No class: Indigenous People's Day
 
-## Tuesday 13 October
-
-- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
-
 ## Wednesday 14 October
 
-No assigned reading.
-
+- John Jordan, "Robots in Popular Culture" (*Robots*, ch. 3)
+- Jitka Čejková, [Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life) to *R.U.R. and the Vision of Artificial Life*
+- [Robot100 website](https://www.robot100.cz/rur)
+- Čapek, [*R.U.R.*](pdf/R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf)
+- [Robbie](pdf/asimov-robbie.pdf) (Isaac Asimov, 1940)
+- [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
+- Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
 

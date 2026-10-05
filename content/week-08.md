@@ -6,6 +6,8 @@ title: "W8: Artificial Friends"
 
 ## Monday 19 October
 
+- ![](pdf/eliza-doctor.pdf)
+- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
 - Sherry Turkle, *Artificial Intimacy* (chs. TBA)
 
 ## Wednesday 21 October

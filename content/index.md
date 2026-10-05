@@ -201,17 +201,29 @@ Filter Bubble: 1
 
 M, Sept. 28
 
-- Freya India, ["Opinions"; "Exposed"](pdf/freya-india-opinions-exposed.pdf) (from *Girls®,* ch. 3, "Documented")
+- NO CLASS (instructor sick)
 
 W, Sept. 30
 
+- Freya India, ["Opinions"; "Exposed"](pdf/freya-india-opinions-exposed.pdf) (from *Girls®,* ch. 3, "Documented")
+
 **Platform Cultures**
 
-- Crystal Abidin, *TikTok Cultures*:
+Crystal Abidin, *TikTok Cultures*:
 - - "[Preface](pdf/crystal-abidin-tiktok-preface.pdf)"
 - - "[Platform Wars](pdf/crystal-abidin-platform-wars.pdf)" (from ch. 1)
 - - "[Appendix](pdf/crystal-abidin-tiktok-appendix.pdf)"
 - - "[Memes and Capital](pdf/crystal-abidin-memes-capital.pdf)" (ch. 3)
+
+### Week 6
+
+**Platform Cultures** (cont.)
+
+M, Oct. 5
+
+- "[The Rise, Fall, and Rise of TikTok with Crystal Abidin](https://podcasts.apple.com/us/podcast/the-rise-fall-and-rise-of-tiktok-with-crystal-abidin/id1570237963?i=1000772904927)" (*The Good Robot*, 16 June 2026) (podcast, 34m.)
+
+W, Oct. 7
 
 - Queline Meadows, "[The Rise of Film TikTok](https://youtu.be/iqajurNSp1Q)"
 - BookTok
@@ -219,39 +231,23 @@ W, Sept. 30
 
 Filter Bubble: 2
 
-### Week 6
+### Week 7
+
+M, Oct. 12: No class, Indigenous People's Day
 
 **Paranoid Androids**
 
-M, Oct. 5
+W, Oct. 14 
 
 - John Jordan, "Robots in Popular Culture" (*Robots*, ch. 3)
-
 - Jitka Čejková, [Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life) to *R.U.R. and the Vision of Artificial Life*
 - [Robot100 website](https://www.robot100.cz/rur)
 - Čapek, [*R.U.R.*](pdf/R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf)
-
-W, Oct. 7
-
 - [Robbie](pdf/asimov-robbie.pdf) (Isaac Asimov, 1940)
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
 Filter Bubble: 3
-
-### Week 7
-
-M, Oct. 12: No class, Indigenous People's Day
-
-**Please Go On: Chatbots**
-
-Tu, Oct. 13
-
-- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
-
-W, Oct. 14 
-
-Filter Bubble: 4
 
 ### Week 8
 
@@ -259,11 +255,12 @@ Filter Bubble: 4
 
 M, Oct. 19
 
+- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
 - Sherry Turkle, *Artificial Intimacy* (chs. TBA)
 
 W, Oct. 21
 
-Filter Bubble: 5
+Filter Bubble: 4
 
 ### Week 9
 
@@ -278,7 +275,7 @@ W, Oct. 28
 - Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
 - Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
 
-Filter Bubble: 6
+Filter Bubble: 5
 
 ### Week 10
 
@@ -294,7 +291,7 @@ W, Nov. 4
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
 - Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
-Filter Bubble: 7
+Filter Bubble: 6
 
 ### Week 11
 
@@ -310,7 +307,7 @@ T, Nov 10
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
 - [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
-Filter Bubble: 8
+Filter Bubble: 7
 
 W, Nov. 11: NO CLASS: Veterans' Day
 
@@ -327,7 +324,7 @@ W, Nov. 18
 
 - Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
-Filter Bubble: 9
+Filter Bubble: 8
 
 F, Nov. 20: WP/WF deadline
 
@@ -349,7 +346,7 @@ Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
 
 W, Dec. 2
 
-Filter Bubble: 10
+Filter Bubble: 9
 
 ### Week 15
 
