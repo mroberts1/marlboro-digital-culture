@@ -198,6 +198,12 @@
   font-display: swap;
 }
 
+// Everything is sized in rem, so this scales all text to 90% (and rem-based
+// spacing with it).
+html {
+  font-size: 90%;
+}
+
 :root {
   --customCallout: var(--highlight);
   --searchBackground: #d3d3d3;
