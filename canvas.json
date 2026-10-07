@@ -27,6 +27,10 @@
       "title": "Material Girls"
     },
     {
+      "source": "bookish",
+      "title": "Bookish"
+    },
+    {
       "source": "t-shirts",
       "title": "T-Shirt Ideas"
     },
@@ -40,12 +44,17 @@
       "nav": false
     },
     {
+      "source": "bourdieu-forms-of-capital",
+      "title": "Pierre Bourdieu, The Forms of Capital",
+      "nav": false
+    },
+    {
       "source": "week-03",
       "title": "W3: Language"
     },
     {
       "source": "week-04",
-      "title": "W4: Girlhood: Out of Body Experiences"
+      "title": "W4: Girlhood"
     },
     {
       "source": "week-05",
@@ -53,11 +62,11 @@
     },
     {
       "source": "week-06",
-      "title": "W6: Paranoid Androids"
+      "title": "W6: Platform Cultures (cont.)"
     },
     {
       "source": "week-07",
-      "title": "W7: Please Go On: Chatbots"
+      "title": "W7: Paranoid Androids"
     },
     {
       "source": "week-08",
@@ -81,11 +90,11 @@
     },
     {
       "source": "week-13",
-      "title": "W13: Blockchain Media"
+      "title": "W13: Data Farming"
     },
     {
       "source": "week-14",
-      "title": "W14: True Hallucinations: Generative Images"
+      "title": "W14: Generative Images"
     }
   ],
   "home_title": "Introduction to Digital Culture"

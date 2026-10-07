@@ -421,7 +421,6 @@ def main():
             sys.exit("could not extract the cover and details for the homepage")
         cid = cfg["course_id"]
         nav = [f'<a href="/courses/{cid}/assignments/syllabus">Syllabus</a>']
-        weeks = []
         slugs = {} if args.only_print else page_slugs(cfg)
         missing = []
         for spec in cfg.get("pages", []):
@@ -431,11 +430,9 @@ def main():
             if slug is None:
                 missing.append(spec["title"])
                 slug = re.sub(r"[^a-z0-9]+", "-", spec["title"].lower()).strip("-")
-            week = re.fullmatch(r"week-0*(\d+)", spec["source"])
-            if week:
-                weeks.append(f'<a href="/courses/{cid}/pages/{slug}">Week {week.group(1)}</a>')
-            else:
-                nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
+            if re.fullmatch(r"week-0*(\d+)", spec["source"]):
+                continue  # weeks live in Canvas Modules, not on the home page
+            nav.append(f'<a href="/courses/{cid}/pages/{slug}">{spec["title"]}</a>')
         if missing:
             print(f"  note: not on Canvas yet, slug guessed for: {', '.join(missing)}")
         # Full width, not the syllabus table: Canvas's course-home content
@@ -447,7 +444,6 @@ def main():
             f'<p><span style="font-size: 8pt;">{parts["caption"]}</span></p>\n'
             f'<p>{parts["heading"]}</p>\n{parts["details"]}\n'
             + "<p>" + " | ".join(nav) + "</p>"
-            + ("\n<hr>\n<p>" + " | ".join(weeks) + "</p>" if weeks else "")
         )
         if args.only_print:
             (VAULT / "canvas-home.html").write_text(home)

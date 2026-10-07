@@ -8,6 +8,8 @@ description: Bibliophilia and the Social Life of Reading
 >
 > ---Bronwyn Reddan, "[Social reading cultures on BookTube, Bookstagram, and BookTok](http://www.slav.vic.edu.au/index.php/Synergy/article/view/597/592)"
 
+![](https://www.youtube.com/watch?v=bqaopTTpaP8)
+
 ### Bibliophilia
 
 Are you "bookish"? As you'll have seen if you've read Jessica Maddox and Fiona Gill's article about Booktok, the term has become ubiquitous in the intersecting worlds of Booktube, Bookstagram, and Booktok, as well as social reading sites like [Goodreads](https://www.goodreads.com/). I want to spend some time here reflecting on the concept of **bookishness** itself. What does it mean to be, or to become, "bookish"? While the term itself long predates social media, it's taken on a particular resonance in relation to the representation of books and the practice of reading on social media. In that context, to be "bookish" means to participate in what Maddox and Gill refer to as the "digital imagined community" of bibliophiles extending across the platforms of YouTube, Instagram, and TikTok. So what does being "bookish" actually mean in *that* specific context? What exactly is "bookishness" in the context of social media?
@@ -63,9 +65,9 @@ Lanre Bakare, "[‘Literature has completely changed my life’: footballer Héc
 
 "[My Honest Thoughts on Booktok, Over Consumption of Books, Loss of Personal Reading Tastes & more](https://youtu.be/DwOpkhxexcA)" ([Ana Wallace Johnson](https://www.youtube.com/@AnaWallaceJohnson/videos))
 
-![](https://youtu.be/DwOpkhxexcA)
+[Haley Pham](https://www.youtube.com/@haleypham/videos), "Reading for 24 hours straight in a book hotel..."
 
-"Reading for 24 hours straight in a book hotel..." [Haley Pham](https://www.youtube.com/@haleypham/videos)
+![](https://www.youtube.com/watch?v=bqaopTTpaP8)
 
 ***
 

@@ -74,38 +74,26 @@ E: Ebook\
 OA: Open Access
 
 - [Crystal Abidin](https://wishcrys.com), *TikTok and Youth Cultures*. SocietyNow series. Leeds, UK: Emerald Publishing, 2025.
-
 - A: Adam Aleksic, [*Algospeak: How Social Media Is Transforming the Future of Language*](https://www.penguinrandomhouse.com/books/776856/algospeak-by-adam-aleksic/). New York: Alfred A. Knopf, 2025.
-
 - OA: Sarah Ciston, David M. Berry, Anthony C. Hay, Mark C. Marino, Peter Millican, Jeff Shrager, Arthur I. Schwarz and Peggy Weil, [*Inventing ELIZA: How The First Chatbot Shaped the Future of AI*](https://direct.mit.edu/books/oa-monograph/6171/Inventing-ELIZAHow-the-First-Chatbot-Shaped-the). MA: MIT Press, 2026.
-
 - A/E: [Freya India](https://www.freyaindia.co.uk/), *GIRLS®: Generation Z and the Commodification of Everything*. New York: MacMillan Books, 2026.
-
 - John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series, 2016.
-
 - E: [Bogna Konior](https://bognamk.com/), [*The Dark Forest Theory of the Internet*](https://www.politybooks.com/bookdetail?book_slug=the-dark-forest-theory-of-the-internet--9781509569250). Cambridge: Polity Press, 2026.
 - \---, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf). Pittsburg and New York: Flugschriften, 2020.
-
 - OA: [Lev Manovich](https://manovich.net/) and Emanuele Arielli, [*Artificial Aesthetics: Generative AI, Art and Visual Media*](http://manovich.net/index.php/projects/artificial-aesthetics-book). 2019-24.
- 
 - Dominic Pettman, *Ghosting: On Disappearance*. Cambridge: Polity Press, 2025.
-
 - Hito Steyerl, *Medium Hot: Images in the Age of Heat*. London: Verso, 2026.
-
 - Sherry Turkle, [*Artificial Intimacy: Who We Become When We Talk To Machines*](https://www.littlebrown.co.uk/titles/sherry-turkle-2/artificial-intimacy/9780349136912/). Boston: Little, Brown & Company. **Published 29 September**. Please purchase after this date.
-
 ### Journals
 
 - [e-flux](https://www.e-flux.com/journal)
 - [New Models](https://www.newmodels.io/)
-
 ### Substack Blogs
 
 - [GIRLS](https://www.freyaindia.co.uk/) (Freya India)
 - [_Internal Exile_](https://robhorning.substack.com/) (Rob Horning)
 - [Jenka Gurfinkel](https://substack.com/@jenka?utm_source=top-search)
 - [Gary Marcus](https://substack.com/@garymarcus?utm_source=top-search) 
-
 ### Other Sources
  
 - [Data & Society](https://datasociety.net/)
@@ -223,7 +211,7 @@ M, Oct. 5
 
 - "[The Rise, Fall, and Rise of TikTok with Crystal Abidin](https://podcasts.apple.com/us/podcast/the-rise-fall-and-rise-of-tiktok-with-crystal-abidin/id1570237963?i=1000772904927)" (*The Good Robot*, 16 June 2026) (podcast, 34m.)
 
-<span class="canvas-only">See also: Pierre Bourdieu, "[The Forms of Capital](pdf/bourdieu_forms_of_capital.pdf)"</span>
+<span class="canvas-only">See also: Pierre Bourdieu, "[The Forms of Capital](https://canvas.emerson.edu/courses/2196805/pages/pierre-bourdieu-the-forms-of-capital)"</span>
 
 W, Oct. 7
 
