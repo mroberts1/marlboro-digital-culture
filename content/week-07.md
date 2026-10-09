@@ -8,7 +8,7 @@ No class: Indigenous People's Day
 
 ## Wednesday 14 October
 
-- John Jordan, "Robots in Popular Culture" (*Robots*, ch. 3)
+- John Jordan, "[Robots in Popular Culture](pdf/jordan-robots-pop-culture.pdf)" (*Robots*, ch. 3)
 - Jitka Čejková, [Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life) to *R.U.R. and the Vision of Artificial Life*
 - [Robot100 website](https://www.robot100.cz/rur)
 - Čapek, [*R.U.R.*](pdf/R.U.R._ Or, Rossum's Universal Robots - Karel Capek.pdf)
