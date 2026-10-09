@@ -16,8 +16,8 @@ configuration:
     cdnCaching: true
     typography:
       header: changeling-neo
-      body: neue-haas-unica
-      code: neue-haas-unica
+      body: Paper Mono
+      code: Paper Mono
     colors:
       # e-flux.com: near-black #101010 on white, #e6e6e6 rules, #666 grey
       lightMode:
@@ -110,8 +110,8 @@ plugins:
     options:
       fontOrigin: local
       header: changeling-neo
-      body: neue-haas-unica
-      code: neue-haas-unica
+      body: Paper Mono
+      code: Paper Mono
   - source: "@quartz-themes/core"
     enabled: false
     options:

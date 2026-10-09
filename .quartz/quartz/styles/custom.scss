@@ -198,6 +198,17 @@
   font-display: swap;
 }
 
+// Paper Mono (OFL), the body and code face. Self-hosted for the same reason
+// as Departure Mono above, with the same relative path. One variable file
+// covers weights 100 to 800; there is no italic, so browsers synthesise one.
+// Built from PaperMono[wght].ttf with fontTools (flavor woff2).
+@font-face {
+  font-family: "Paper Mono";
+  src: url("static/fonts/PaperMono.woff2") format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
+}
+
 // Everything is sized in rem, so this scales all text to 90% (and rem-based
 // spacing with it).
 html {
@@ -208,11 +219,11 @@ html {
   --customCallout: var(--highlight);
   --searchBackground: #d3d3d3;
 
-  // Neue Haas Unica is declared by the @font-face rules at the top. The
-  // quartz-fonts plugin emits a bare family name; these add the fallback stack.
+  // The quartz-fonts plugin emits a bare family name; these add the fallback
+  // stack. Neue Haas Unica's @font-face rules are kept but unreferenced.
   --headerFont: "changeling-neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --bodyFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --codeFont: "neue-haas-unica", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bodyFont: "Paper Mono", ui-monospace, Menlo, monospace;
+  --codeFont: "Paper Mono", ui-monospace, Menlo, monospace;
 }
 
 :root[saved-theme="dark"] {

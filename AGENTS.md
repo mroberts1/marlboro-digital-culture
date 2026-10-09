@@ -148,7 +148,13 @@ Everything the YAML cannot express lives in `.quartz/quartz/styles/custom.scss`:
 the self-hosted font, a tighter heading scale, wrapped code blocks, a card grid
 for folder listings, and the `[!custom]` callout.
 
-Neue Haas Unica (Adobe Fonts kit `ejl5bmc`) is the header, body and code face,
+Paper Mono is the body and code face, self-hosted as one variable
+`quartz/static/fonts/PaperMono.woff2` (OFL, converted from the TTF with
+fontTools). Headings stay Changeling Neo. Paper Mono has no italic, so browsers
+synthesise one. The Neue Haas Unica notes below still apply to its kept but
+unreferenced `@font-face` rules.
+
+Neue Haas Unica (Adobe Fonts kit `ejl5bmc`) was the header, body and code face,
 after e-flux.com, with a white and `#101010` light palette and a type scale at
 75% of e-flux's. The family is `neue-haas-unica`, set in `quartz.config.yaml`
 with `fontOrigin: local` because it is not a Google font. Its `@font-face` rules
