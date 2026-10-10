@@ -30,7 +30,7 @@ term: Fall 2026
 > [!custom]IN 206 Introduction to Digital Media & Culture 
 > Dr. Martin Roberts\
 > [Emerson College](https://emerson.edu)\
-> Spring 2025
+> Fall 2026
 > 
 > Mon + Wed 12-1:45 p.m. | Walker 633\
 > Office hrs: Thurs 4:00-5:00 p.m.\
