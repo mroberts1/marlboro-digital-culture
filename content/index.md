@@ -88,12 +88,14 @@ OA: Open Access
 
 - [e-flux](https://www.e-flux.com/journal)
 - [New Models](https://www.newmodels.io/)
+ 
 ### Substack Blogs
 
 - [GIRLS](https://www.freyaindia.co.uk/) (Freya India)
 - [_Internal Exile_](https://robhorning.substack.com/) (Rob Horning)
 - [Jenka Gurfinkel](https://substack.com/@jenka?utm_source=top-search)
 - [Gary Marcus](https://substack.com/@garymarcus?utm_source=top-search) 
+
 ### Other Sources
  
 - [Data & Society](https://datasociety.net/)
