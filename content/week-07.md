@@ -8,9 +8,7 @@ No class: Indigenous People's Day
 
 ## Wednesday 14 October
 
-![](img/all-full-love.jpg)
-
-<small>Image: Björk, "All Is Full of Love" (Dir. Chris Cunningham, 1997)</small>
+![](img/astroboy.webp)
 
 - John Jordan, "[Robots in Popular Culture](pdf/jordan-robots-pop-culture.pdf)" (*Robots*, ch. 3)
 - Jitka Čejková, [Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life) to *R.U.R. and the Vision of Artificial Life*
