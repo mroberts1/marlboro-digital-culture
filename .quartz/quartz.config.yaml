@@ -15,7 +15,7 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: changeling-neo
+      header: VG5000
       body: Paper Mono
       code: Paper Mono
     colors:
@@ -109,7 +109,7 @@ plugins:
     enabled: true
     options:
       fontOrigin: local
-      header: changeling-neo
+      header: VG5000
       body: Paper Mono
       code: Paper Mono
   - source: "@quartz-themes/core"

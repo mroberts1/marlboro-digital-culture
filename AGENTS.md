@@ -150,7 +150,7 @@ for folder listings, and the `[!custom]` callout.
 
 Paper Mono is the body and code face, self-hosted as one variable
 `quartz/static/fonts/PaperMono.woff2` (OFL, converted from the TTF with
-fontTools). Headings stay Changeling Neo. Paper Mono has no italic, so browsers
+fontTools). Headings are VG5000, self-hosted as `quartz/static/fonts/VG5000-Regular.woff2` (regular only, so bold is synthesised). Paper Mono has no italic, so browsers
 synthesise one. The Neue Haas Unica notes below still apply to its kept but
 unreferenced `@font-face` rules.
 

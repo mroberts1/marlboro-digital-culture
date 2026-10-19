@@ -8,6 +8,8 @@ No class: Indigenous People's Day
 
 ## Wednesday 14 October
 
+## Paranoid Androids
+
 ![](img/astroboy.webp)
 
 - John Jordan, "[Robots in Popular Culture](pdf/jordan-robots-pop-culture.pdf)" (*Robots*, ch. 3)

@@ -215,13 +215,22 @@ html {
   font-size: 90%;
 }
 
+// VG5000, the header face. Self-hosted like Paper Mono, same relative path.
+// Regular only, so bold headings get a synthesised bold.
+@font-face {
+  font-family: "VG5000";
+  src: url("static/fonts/VG5000-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --customCallout: var(--highlight);
   --searchBackground: #d3d3d3;
 
   // The quartz-fonts plugin emits a bare family name; these add the fallback
   // stack. Neue Haas Unica's @font-face rules are kept but unreferenced.
-  --headerFont: "changeling-neo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --headerFont: "VG5000", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --bodyFont: "Paper Mono", ui-monospace, Menlo, monospace;
   --codeFont: "Paper Mono", ui-monospace, Menlo, monospace;
 }

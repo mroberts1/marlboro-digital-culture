@@ -1,5 +1,5 @@
 ---
-title: Intro to Digital Media & Culture
+title: Introduction to digital media & culture
 instructor: Martin Roberts
 institution: Emerson College
 term: Fall 2026
@@ -27,16 +27,15 @@ term: Fall 2026
 
 <small>Image: Emma Stone in *Bugonia* (Yorgos Lanthimos, 2025)</small>
 
-> [!custom]IN 206 Introduction to Digital Media & Culture 
-> Dr. Martin Roberts\
-> [Emerson College](https://emerson.edu)\
-> Fall 2026
-> 
-> Mon + Wed 12-1:45 p.m. | Walker 633\
-> Office hrs: Thurs 4:00-5:00 p.m.\
-> Office: Ansin 916D\
-> <span class="web-only">[PDF syllabus](pdf/syllabus.pdf)</span><span class="canvas-only">[Web syllabus](https://mroberts1.github.io/marlboro-digital-culture)</span>\
-> [YouTube playlist](https://youtube.com/playlist?list=PLQRCvvkS_gT4&si=A4qEs2E6uI5AJFas)\
+> [!custom]IN 206 
+> Dr. Martin Roberts  
+> [Emerson College](https://emerson.edu)  
+> Fall 2026  
+> Mon + Wed 12-1:45 p.m. | Walker 633  
+> Office hrs: Thurs 4:00-5:00 p.m.  
+> Office: Ansin 916D  
+> <span class="web-only">[PDF syllabus](pdf/syllabus.pdf)</span><span class="canvas-only">[Web syllabus](https://mroberts1.github.io/marlboro-digital-culture)</span>  
+> [YouTube playlist](https://youtube.com/playlist?list=PLQRCvvkS_gT4&si=A4qEs2E6uI5AJFas)  
 > [<i class="fa-solid fa-envelope" role="img" aria-label="Email"></i>](mailto:martin_roberts@emerson.edu) \| [<i class="fa-brands fa-mastodon" role="img" aria-label="Mastodon"></i>](https://merveilles.town/@dokoissho) \| [<i class="fa-brands fa-github" role="img" aria-label="GitHub"></i>](https://github.com/mroberts1/) \| [<i class="fa-brands fa-twitter" role="img" aria-label="Twitter"></i>](https://twitter.com/mroberts_vma)
 
 ## Course Description
@@ -84,6 +83,7 @@ OA: Open Access
 - Dominic Pettman, *Ghosting: On Disappearance*. Cambridge: Polity Press, 2025.
 - Hito Steyerl, *Medium Hot: Images in the Age of Heat*. London: Verso, 2026.
 - Sherry Turkle, [*Artificial Intimacy: Who We Become When We Talk To Machines*](https://www.littlebrown.co.uk/titles/sherry-turkle-2/artificial-intimacy/9780349136912/). Boston: Little, Brown & Company. **Published 29 September**. Please purchase after this date.
+
 ### Journals
 
 - [e-flux](https://www.e-flux.com/journal)
@@ -248,7 +248,7 @@ Filter Bubble: 3
 M, Oct. 19
 
 - Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
-- Sherry Turkle, *Artificial Intimacy* (chs. TBA)
+- [Sherry Turkle](https://www.sherryturkle.com/the-author), *Artificial Intimacy* (chs. TBA)
 
 W, Oct. 21
 
