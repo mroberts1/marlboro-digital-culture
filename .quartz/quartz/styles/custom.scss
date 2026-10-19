@@ -216,7 +216,7 @@ html {
 }
 
 // VG5000, the header face. Self-hosted like Paper Mono, same relative path.
-// Regular only, so bold headings get a synthesised bold.
+// Regular only, so headings are set at weight 400 to avoid a synthesised bold.
 @font-face {
   font-family: "VG5000";
   src: url("static/fonts/VG5000-Regular.woff2") format("woff2");
@@ -323,7 +323,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 // Links after e-flux.com: body text colour, regular weight, no highlight box,
