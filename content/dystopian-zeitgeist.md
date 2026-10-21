@@ -4,25 +4,21 @@ title: "Dystopian Zeitgeist"
 
 ![[img/wordcloud.png|700]]
 
-- agent
-- AI-slop
 - algospeak
-- aspirational
-- attention-cycle
 - aura-farming
-- brain-rot
-- chad
+- brainrot
+- clanker
+- cringe
 - facetuning
 - filter-bubble
 - ghosting
 - goblin-mode
 - looksmaxxing
 - mogging
+- offloading
 - oversharing
-- overthinking
 - ragebait
-- red-pill
-- soft-launch
+- slopification
 - vibe-coding
 - zoomergaze
 
