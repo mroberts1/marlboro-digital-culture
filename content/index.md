@@ -221,7 +221,7 @@ W, Oct. 7
 - BookTok
 - [TikTok Cultures Research Network](https://tiktokcultures.com/)
 
-Filter Bubble: 2
+Filter Bubble
 
 ### Week 7
 
@@ -250,7 +250,7 @@ M, Oct. 19
 
 W, Oct. 21
 
-Filter Bubble: 3
+Filter Bubble
 
 ### Week 9
 
@@ -258,14 +258,12 @@ Filter Bubble: 3
 
 M, Oct. 26
 
-- Dominic Pettman, *Ghosting*, chs. TBA
-
 W, Oct. 28
 
-- Greg Narr and Anh Luong, “Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom” (*The Communication Review*, 5 October)
-- Jane Barnette, “Hocus-Pocus: WitchTok Education for Baby Witches” (in Trevor Boffone, _TikTok Cultures in the United States_)
+- Greg Narr and Anh Luong, “[Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom](pdf/bored-ghosts.pdf)" (*The Communication Review*, 5 October)
+- Jane Barnette, “[Hocus-Pocus: WitchTok Education for Baby Witches](pdf/witchtok.pdf)” (in Trevor Boffone, _TikTok Cultures in the United States_)
 
-Filter Bubble: 4
+Filter Bubble
 
 ### Week 10
 
@@ -281,7 +279,7 @@ W, Nov. 4
 - Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
 - Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
-Filter Bubble: 5
+Filter Bubble
 
 ### Week 11
 
@@ -297,7 +295,7 @@ T, Nov 10
 - Screening: *Dragonfly Eyes* (Xu Bing, 2017)
 - [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
-Filter Bubble: 6
+Filter Bubble
 
 W, Nov. 11: NO CLASS: Veterans' Day
 
@@ -314,7 +312,7 @@ W, Nov. 18
 
 - Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
-Filter Bubble: 7
+Filter Bubble
 
 F, Nov. 20: WP/WF deadline
 
@@ -336,7 +334,7 @@ Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
 
 W, Dec. 2
 
-Filter Bubble: 8
+Filter Bubble
 
 ### Week 15
 

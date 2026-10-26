@@ -6,12 +6,10 @@ title: "W9: How To Disappear Completely"
 
 ## Monday 26 October
 
-- Dominic Pettman, *Ghosting* (chs. TBA)
-
 ## Wednesday 28 October
 
-- Greg Narr and Anh Luong, "Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom" (*The Communication Review*, 5 October)
-- Jane Barnette, "Hocus-Pocus: WitchTok Education for Baby Witches" (in Trevor Boffone, *TikTok Cultures in the United States*)
+- Greg Narr and Anh Luong, “[Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom](pdf/bored-ghosts.pdf)" (*The Communication Review*, 5 October)
+- Jane Barnette, “[Hocus-Pocus: WitchTok Education for Baby Witches](pdf/witchtok.pdf)” (in Trevor Boffone, _TikTok Cultures in the United States_)
 
 
 
