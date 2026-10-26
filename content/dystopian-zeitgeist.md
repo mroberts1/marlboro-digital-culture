@@ -4,11 +4,12 @@ title: "Dystopian Zeitgeist"
 
 ![[img/wordcloud.png|700]]
 
-- algospeak
 - aura-farming
 - brainrot
 - clanker
 - cringe
+- datamoshing
+- doomer
 - facetuning
 - filter-bubble
 - ghosting
@@ -22,4 +23,4 @@ title: "Dystopian Zeitgeist"
 - vibe-coding
 - zoomergaze
 
-Updated 13 September 2026
+Updated 22 October 2026
