@@ -34,7 +34,7 @@ term: Fall 2026
 > Mon + Wed 12-1:45 p.m. | Walker 633  
 > Office hrs: Thurs 4:00-5:00 p.m.  
 > Office: Ansin 916D  
-> <span class="web-only">[PDF syllabus](pdf/syllabus.pdf)</span><span class="canvas-only">[Web syllabus](https://mroberts1.github.io/marlboro-digital-culture)</span>  
+> <span class="web-only">[PDF syllabus](pdf/syllabus.pdf)<br>[Canvas](https://canvas.emerson.edu/courses/2196805)</span><span class="canvas-only">[Web syllabus](https://mroberts1.github.io/marlboro-digital-culture)</span>  
 > [YouTube playlist](https://youtube.com/playlist?list=PLQRCvvkS_gT4&si=A4qEs2E6uI5AJFas)  
 > [<i class="fa-solid fa-envelope" role="img" aria-label="Email"></i>](mailto:martin_roberts@emerson.edu) \| [<i class="fa-brands fa-mastodon" role="img" aria-label="Mastodon"></i>](https://merveilles.town/@dokoissho) \| [<i class="fa-brands fa-github" role="img" aria-label="GitHub"></i>](https://github.com/mroberts1/) \| [<i class="fa-brands fa-twitter" role="img" aria-label="Twitter"></i>](https://twitter.com/mroberts_vma)
 
