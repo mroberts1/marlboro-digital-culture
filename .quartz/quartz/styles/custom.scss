@@ -215,6 +215,40 @@ html {
   font-size: 90%;
 }
 
+// Spline Sans Mono (OFL), the body face. Latin subset from Google Fonts, four
+// static files with real italics, same relative path as the faces above.
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("static/fonts/SplineSansMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("static/fonts/SplineSansMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("static/fonts/SplineSansMono-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("static/fonts/SplineSansMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 // VG5000, the header face. Self-hosted like Paper Mono, same relative path.
 // Regular only, so headings are set at weight 400 to avoid a synthesised bold.
 @font-face {
@@ -231,7 +265,7 @@ html {
   // The quartz-fonts plugin emits a bare family name; these add the fallback
   // stack. Neue Haas Unica's @font-face rules are kept but unreferenced.
   --headerFont: "VG5000", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --bodyFont: "Paper Mono", ui-monospace, Menlo, monospace;
+  --bodyFont: "Spline Sans Mono", ui-monospace, Menlo, monospace;
   --codeFont: "Paper Mono", ui-monospace, Menlo, monospace;
 }
 
@@ -714,4 +748,16 @@ img.float-left ~ blockquote {
   border-top: 1px solid var(--lightgray);
   margin-top: 0.5rem;
   padding-top: 0.5rem;
+}
+
+// An image inside a link should follow the link, not open the lightbox. The
+// image-zoom plugin tags every image and listens for clicks on
+// img.lightbox-image; without pointer events the click lands on the <a>,
+// which has to be inline-block or its box is one line tall and misses it.
+a:has(> .lightbox-image) {
+  display: inline-block;
+}
+
+a .lightbox-image {
+  pointer-events: none;
 }

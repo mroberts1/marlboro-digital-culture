@@ -16,7 +16,7 @@ configuration:
     cdnCaching: true
     typography:
       header: VG5000
-      body: Paper Mono
+      body: Spline Sans Mono
       code: Paper Mono
     colors:
       # e-flux.com: near-black #101010 on white, #e6e6e6 rules, #666 grey
@@ -110,7 +110,7 @@ plugins:
     options:
       fontOrigin: local
       header: VG5000
-      body: Paper Mono
+      body: Spline Sans Mono
       code: Paper Mono
   - source: "@quartz-themes/core"
     enabled: false

@@ -148,7 +148,11 @@ Everything the YAML cannot express lives in `.quartz/quartz/styles/custom.scss`:
 the self-hosted font, a tighter heading scale, wrapped code blocks, a card grid
 for folder listings, and the `[!custom]` callout.
 
-Paper Mono is the body and code face, self-hosted as one variable
+Spline Sans Mono is the body face, self-hosted as four latin-subset files
+(`SplineSansMono-{Regular,Bold,Italic,BoldItalic}.woff2`, OFL, from Google
+Fonts) in `quartz/static/fonts/`. The family is set in two places in
+`quartz.config.yaml`: `theme.typography` and the quartz-fonts plugin options.
+Paper Mono is the code face, self-hosted as one variable
 `quartz/static/fonts/PaperMono.woff2` (OFL, converted from the TTF with
 fontTools). Headings are VG5000, self-hosted as `quartz/static/fonts/VG5000-Regular.woff2` (regular only, so headings are set at weight 400 in `custom.scss` to avoid a synthesised bold). Paper Mono has no italic, so browsers
 synthesise one. The Neue Haas Unica notes below still apply to its kept but
