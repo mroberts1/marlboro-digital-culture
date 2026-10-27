@@ -9,6 +9,11 @@ title: Aura farming
 >
 >-- "The Work of Art in the Age of Mechanical Reproduction" (1935)
 
+>[!custom] Aura farming
+>Aura farming, the display of composed, unpredictable movement that reads as effortless charisma, has moved in two years from gaming slang to staged competitions. The trend runs on folk rules of surprising precision: short, unforeseeable moves win; polish is irrelevant; and visible effort voids the verdict, so that farming aura overtly is the one reliable way to lose it. Digital culture research has documented adjacent phenomena but offers no account of what these audiences are actually judging or why the effortlessness clause holds. This paper provides one. Aura, it argues, is a verdict read in the global mode of gestural meaning: a judgment on the integration of a persona with its own movement, made on the display as a whole rather than assembled from its parts. The farming paradox then dissolves as a collision of grains: the accounting grain in which points are tallied cannot capture, and actively corrupts, the global grain in which the verdict is read. The account explains why the trend belongs to the predictive-machinery era, treats NPC streaming as its structural inverse, and yields testable predictions about segmentation, persona congruence, and attributed origin.
+>
+> -- Luis Escobar L.-Dellamary, "[The Unfarmable Aura: What Aura Farming Displays, and Why Visible Effort Voids It](pdf/aura-farming.pdf)" (*Preprints.org*, 3 September 2026)
+
 ***
 
 - Candela Martin, "[‘Farmear aura’: el fenómeno que estalló en Argentina y Brasil estrena su primera batalla en España](https://www.elobservador.com.uy/espana/sucede/farmear-aura-el-fenomeno-que-estallo-argentina-y-brasil-estrena-su-primera-batalla-espana-n6054791)" (*El Observador*, 22 August 2026)
