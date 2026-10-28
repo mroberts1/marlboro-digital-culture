@@ -3,7 +3,7 @@ title: Aura farming
 ---
 
 ![](img/cristo-redentor.jpg)<br>
-<small>*Cristo Redentor aura farming, Rio de Janeiro, Brazil, posted by Professor Scott Salmon after re-election of Luis Inácio Lula de Silva as president of Brazil, Facebook, Monday 26 October 2026.*</small>
+<small>*Cristo Redentor statue above Rio de Janeiro, Brazil, posted by Professor Scott Salmon after re-election of Luis Inácio Lula de Silva as president of Brazil, Facebook, Monday 26 October 2026.*</small>
 
 ***
 
