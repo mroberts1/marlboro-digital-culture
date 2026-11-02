@@ -29,11 +29,12 @@ password=$(security find-generic-password -s canvas-emerson -a "$ACCOUNT" -w) ||
   exit 1
 }
 
+agent-browser wait 'input[type=email], input[name=email]'
 agent-browser fill 'input[type=email], input[name=email]' "$ACCOUNT"
-agent-browser find role button Next click
+agent-browser find role button click --name Next
 agent-browser wait 'input[type=password]'
 agent-browser fill 'input[type=password]' "$password"
-agent-browser find role button "Log in" click
+agent-browser find role button click --name "Log in"
 
 echo "approve the Duo prompt on your phone; waiting..."
 for _ in $(seq 60); do
