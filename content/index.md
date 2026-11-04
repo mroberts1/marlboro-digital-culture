@@ -272,8 +272,8 @@ Filter Bubble
 
 M, Nov. 2
 
-- Bogna Konior, [*The Dark Forest Theory of the Internet*](https://cdn.sanity.io/files/pzp8420m/production/37f26bcd27bdf5ddaa494daf9ef3f9648b7adc4c.pdf)
-(read at least this short version; chapters from the longer book will also be provided)
+- Bogna Konior, [*The Dark Forest Theory of the Internet*](https://www.wiley.com/en-us/shop/cultural-studies-general/the-dark-forest-theory-of-the-internet-p-9781509569274)
+(read at least the introduction and first chapter)
 
 W, Nov. 4
 

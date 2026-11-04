@@ -38,7 +38,7 @@ Sarah J. Jackson, Moya Bailey, et al., *#Hashtag Activism: Networks of Race and 
 
 John Jordan, *Robots*. Cambridge, MA: MIT Press. Essential Knowledge series, 2016.
 
-E: Bogna Konior, *The Dark Forest Theory of the Internet*. Cambridge: Polity Press, 2026.
+E: Bogna Konior, [*The Dark Forest Theory of the Internet*](https://www.wiley.com/en-us/shop/cultural-studies-general/the-dark-forest-theory-of-the-internet-p-9781509569274)
 
 A/E: [Christine Lagorio-Chafkin](https://x.com/lagorio), *We Are the Nerds: The Birth and Tumultuous Life of Reddit, the Internet's Culture Laboratory* (New York: Hachette Books, 2018).
 
