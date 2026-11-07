@@ -148,15 +148,7 @@ Everything the YAML cannot express lives in `.quartz/quartz/styles/custom.scss`:
 the self-hosted font, a tighter heading scale, wrapped code blocks, a card grid
 for folder listings, and the `[!custom]` callout.
 
-Spline Sans Mono is the body face, self-hosted as four latin-subset files
-(`SplineSansMono-{Regular,Bold,Italic,BoldItalic}.woff2`, OFL, from Google
-Fonts) in `quartz/static/fonts/`. The family is set in two places in
-`quartz.config.yaml`: `theme.typography` and the quartz-fonts plugin options.
-Paper Mono is the code face, self-hosted as one variable
-`quartz/static/fonts/PaperMono.woff2` (OFL, converted from the TTF with
-fontTools). Headings are VG5000, self-hosted as `quartz/static/fonts/VG5000-Regular.woff2` (regular only, so headings are set at weight 400 in `custom.scss` to avoid a synthesised bold). Paper Mono has no italic, so browsers
-synthesise one. The Neue Haas Unica notes below still apply to its kept but
-unreferenced `@font-face` rules.
+Swiss design. IBM Plex Sans is the header and body face and IBM Plex Mono the code face, self-hosted as `quartz/static/fonts/IBMPlexSans.woff2`, `IBMPlexSans-Italic.woff2` and `IBMPlexMono.woff2` (OFL, latin subset, variable weight). The families are set in two places in `quartz.config.yaml`: `theme.typography` and the quartz-fonts plugin options. The palette is stone with one accent, Swiss red `#C8102E`, and text hierarchy comes from opacity, not extra hues. Headings are weight 300 with tight tracking and body text is capped at 60ch. The `@font-face` rules for earlier faces (VG5000, Spline Sans Mono, Paper Mono, Neue Haas Unica) are kept but unreferenced. The styling is the swiss-design skill (`~/.agents/skills/swiss-design`) ported from Tailwind to SCSS in `custom.scss`.
 
 Neue Haas Unica (Adobe Fonts kit `ejl5bmc`) was the header, body and code face,
 after e-flux.com, with a white and `#101010` light palette and a type scale at

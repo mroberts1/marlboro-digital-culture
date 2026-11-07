@@ -15,32 +15,32 @@ configuration:
     fontOrigin: local
     cdnCaching: true
     typography:
-      header: VG5000
-      body: Spline Sans Mono
-      code: Paper Mono
+      header: IBM Plex Sans
+      body: IBM Plex Sans
+      code: IBM Plex Mono
     colors:
-      # e-flux.com: near-black #101010 on white, #e6e6e6 rules, #666 grey
+      # Swiss design: stone palette, one accent (Swiss red #C8102E). Hierarchy
+      # comes from the opacity of the text colour, not from a second hue.
       lightMode:
-        light: "#ffffff"
-        lightgray: "#e6e6e6"
-        gray: "#666666"
-        darkgray: "#101010"
-        dark: "#101010"
-        secondary: "#284d78"
-        tertiary: "#c8482b"
-        highlight: rgba(200, 72, 43, 0.1)
-        textHighlight: "#f4c84b88"
-      # cyanotype palette from jzhao.xyz: light blue + vermilion on prussian blue
+        light: "#fafaf9"
+        lightgray: "#e7e5e4"
+        gray: "rgba(28, 25, 23, 0.4)"
+        darkgray: "rgba(28, 25, 23, 0.7)"
+        dark: "#1c1917"
+        secondary: "#C8102E"
+        tertiary: "#C8102E"
+        highlight: rgba(200, 16, 46, 0.1)
+        textHighlight: "rgba(200, 16, 46, 0.2)"
       darkMode:
-        light: "#06182f"
-        lightgray: "#122845"
-        gray: "#7191b8"
-        darkgray: "#caddf4"
-        dark: "#eef4fc"
-        secondary: "#8fb9de"
-        tertiary: "#e0552f"
-        highlight: rgba(224, 85, 47, 0.14)
-        textHighlight: "#c9542f55"
+        light: "#0c0a09"
+        lightgray: "#292524"
+        gray: "rgba(250, 250, 249, 0.4)"
+        darkgray: "rgba(250, 250, 249, 0.7)"
+        dark: "#fafaf9"
+        secondary: "#C8102E"
+        tertiary: "#C8102E"
+        highlight: rgba(200, 16, 46, 0.2)
+        textHighlight: "rgba(200, 16, 46, 0.3)"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -109,9 +109,9 @@ plugins:
     enabled: true
     options:
       fontOrigin: local
-      header: VG5000
-      body: Spline Sans Mono
-      code: Paper Mono
+      header: IBM Plex Sans
+      body: IBM Plex Sans
+      code: IBM Plex Mono
   - source: "@quartz-themes/core"
     enabled: false
     options:
