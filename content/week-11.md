@@ -2,8 +2,6 @@
 title: "W11: Invisible Images"
 ---
 
-*9-11 November 2026*
-
 ## Monday 9 November
 
 - [Trevor Paglen](https://paglen.studio/), "[Operational Images](https://www.e-flux.com/journal/59/61130/operational-images/)" (*e-flux journal*, #59, November 2014)

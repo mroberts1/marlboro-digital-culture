@@ -197,29 +197,22 @@ W, Sept. 30
 
 - Freya India, ["Opinions"; "Exposed"](pdf/freya-india-opinions-exposed.pdf) (from *Girls®,* ch. 3, "Documented")
 
+### Week 6
+
 **Platform Cultures**
+
+M, Oct. 5
 
 Crystal Abidin, *TikTok Cultures*:
 - - "[Preface](pdf/crystal-abidin-tiktok-preface.pdf)"
 - - "[Platform Wars](pdf/crystal-abidin-platform-wars.pdf)" (from ch. 1)
 - - "[Appendix](pdf/crystal-abidin-tiktok-appendix.pdf)"
 - - "[Memes and Capital](pdf/crystal-abidin-memes-capital.pdf)" (ch. 3)
-
-### Week 6
-
-**Platform Cultures** (cont.)
-
-M, Oct. 5
-
 - "[The Rise, Fall, and Rise of TikTok with Crystal Abidin](https://podcasts.apple.com/us/podcast/the-rise-fall-and-rise-of-tiktok-with-crystal-abidin/id1570237963?i=1000772904927)" (*The Good Robot*, 16 June 2026) (podcast, 34m.)
 
 <span class="canvas-only">See also: Pierre Bourdieu, "[The Forms of Capital](https://canvas.emerson.edu/courses/2196805/pages/pierre-bourdieu-the-forms-of-capital)"</span>
 
 W, Oct. 7
-
-- Queline Meadows, "[The Rise of Film TikTok](https://youtu.be/iqajurNSp1Q)"
-- BookTok
-- [TikTok Cultures Research Network](https://tiktokcultures.com/)
 
 Filter Bubble
 
@@ -227,9 +220,17 @@ Filter Bubble
 
 M, Oct. 12: No class, Indigenous People's Day
 
+W, Oct. 14 
+
+- Queline Meadows, "[The Rise of Film TikTok](https://youtu.be/iqajurNSp1Q)"
+- BookTok
+- [TikTok Cultures Research Network](https://tiktokcultures.com/)
+
+### Week 8
+
 **Paranoid Androids**
 
-W, Oct. 14 
+M, Oct. 19
 
 - John Jordan, "[Robots in Popular Culture](pdf/jordan-robots-pop-culture.pdf)" (*Robots*, ch. 3)
 - Jitka Čejková, [Introduction](https://canvas.emerson.edu/courses/2196805/pages/introduction-r-dot-u-r-and-the-vision-of-artificial-life) to *R.U.R. and the Vision of Artificial Life*
@@ -239,62 +240,48 @@ W, Oct. 14
 - [Robbie](https://en.wikipedia.org/wiki/Robbie_\(short_story\)) (Wikipedia)
 - Villiers de L'Isle-Adam, [*Tomorrow's Eve*](https://archive.org/details/tomorrowseve0000vill/mode/2up) (1878)
 
-### Week 8
-
-**Turing Test**
-
-M, Oct. 19
-
-- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
-- [Sherry Turkle](https://www.sherryturkle.com/the-author), *Artificial Intimacy* (chs. TBA)
-
 W, Oct. 21
 
 Filter Bubble
 
 ### Week 9
 
-**How To Disappear Completely**
+**Turing Test**
 
 M, Oct. 26
 
-W, Oct. 28
+- Sarah Ciston et al., "[Please Go On: An Introduction](pdf/eliza-intro.pdf)" (*Inventing ELIZA*)
+- [Sherry Turkle](https://www.sherryturkle.com/the-author), *Artificial Intimacy* (chs. TBA)
 
-- Greg Narr and Anh Luong, “[Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom](pdf/bored-ghosts.pdf)" (*The Communication Review*, 5 October)
-- Jane Barnette, “[Hocus-Pocus: WitchTok Education for Baby Witches](pdf/witchtok.pdf)” (in Trevor Boffone, _TikTok Cultures in the United States_)
-- Mark Fisher, "[What is Hauntology?](pdf/fisher-hauntology.pdf)"
+W, Oct. 28
 
 Filter Bubble
 
 ### Week 10
 
-**Hiding from Predators**
+**Hauntology**
 
 M, Nov. 2
 
-- Bogna Konior, [*The Dark Forest Theory of the Internet*](https://www.wiley.com/en-us/shop/cultural-studies-general/the-dark-forest-theory-of-the-internet-p-9781509569274)
-(read at least the introduction and first chapter)
+- Greg Narr and Anh Luong, “[Bored ghosts in the dating app assemblage: How dating app algorithms couple ghosting behaviors with a mood of boredom](pdf/bored-ghosts.pdf)" (*The Communication Review*, 5 October)
+- Jane Barnette, “[Hocus-Pocus: WitchTok Education for Baby Witches](pdf/witchtok.pdf)” (in Trevor Boffone, _TikTok Cultures in the United States_)
+- Mark Fisher, "[What is Hauntology?](pdf/fisher-hauntology.pdf)"
 
 W, Nov. 4
-
-- Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
-- Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
 Filter Bubble
 
 ### Week 11
 
-**Invisible Images**
+**Hiding from Predators**
 
 M, Nov. 09 
 
-- [Trevor Paglen](https://paglen.studio/), "[Operational Images](https://www.e-flux.com/journal/59/61130/operational-images/)" (_e-flux journal_, #59, November 2014)
+- Bogna Konior, [*The Dark Forest Theory of the Internet*](https://www.wiley.com/en-us/shop/cultural-studies-general/the-dark-forest-theory-of-the-internet-p-9781509569274) (read at least the introduction and first chapter)
+- Maggie Appleton, "[The Dark Forest & The Cozy Web](https://maggieappleton.com/cozy-web)"
+- Yancey Strickler, "[The Dark Forest Theory of the Internet](pdf/yancey-strickler-dark-forest-pt1.pdf)" "[Beyond The Dark Forest Theory of the Internet](pdf/yancey-strickler-medium-pt2.pdf)" (2019)
 
 T, Nov 10 
-
-- [Trevor Paglen](https://paglen.studio/), "[Invisible Images (Your Pictures Are Looking At You)](https://thenewinquiry.com/invisible-images-your-pictures-are-looking-at-you/)" (_The New Inquiry_, 8 December 2016)
-- Screening: *Dragonfly Eyes* (Xu Bing, 2017)
-- [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
 Filter Bubble
 
@@ -302,16 +289,16 @@ W, Nov. 11: NO CLASS: Veterans' Day
 
 ### Week 12
 
-**Blockchain Media**
+**Invisible Images**
 
 M, Nov. 16 
 
-- Xiaowei Wang, "[Behind China’s ‘pork miracle: how technology is transforming rural hog farming](https://www.theguardian.com/environment/2020/oct/08/behind-chinas-pork-miracle-how-technology-is-transforming-rural-hog-farming)" (*The Guardian*, 8 October 2020)
-- Xiaowei Wang, "When AI Farms Pigs" (*Blockchain Chicken Farm*, ch. 3)
+- [Trevor Paglen](https://paglen.studio/), "[Operational Images](https://www.e-flux.com/journal/59/61130/operational-images/)" (_e-flux journal_, #59, November 2014)
+- [Trevor Paglen](https://paglen.studio/), "[Invisible Images (Your Pictures Are Looking At You)](https://thenewinquiry.com/invisible-images-your-pictures-are-looking-at-you/)" (_The New Inquiry_, 8 December 2016)
+- Screening: *Dragonfly Eyes* (Xu Bing, 2017)
+- [*Dragonfly Eyes* presskit](pdf/dragonfly-eyes-presskit.pdf)
 
 W, Nov. 18
-
-- Screening: *High Rise Pigs* (Siew Ching Ang, 2025)
 
 Filter Bubble
 
@@ -319,19 +306,20 @@ F, Nov. 20: WP/WF deadline
 
 ### Week 13
 
+**Hallucinations**
+
 M, Nov. 23 
 
-- Screening: *The Harvest* (Misho Antadze, 2019)
+- Hito Steyerl, "[In Defense of the Poor Image](https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image)"
+- Kevin Esherick, "[Manglecore and the Aesthetic of Strangeness](https://kevinesherick.substack.com/p/manglecore-and-the-aesthetic-of-strangeness)" (*Duckrabbit*, 5 February 2024)
 
 W, Nov. 25: No class, Thanksgiving Break
 
 ### Week 14
 
-**True Hallucinations: Generative Images**
-
 M, Nov. 30
 
-Hito Steyerl, *Medium Hot: Images in the Age of Heat* (chs. TBA)
+TBA
 
 W, Dec. 2
 

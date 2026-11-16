@@ -2,8 +2,6 @@
 title: "W9: How To Disappear Completely"
 ---
 
-*26-28 October 2026*
-
 ## Monday 26 October
 
 ## Wednesday 28 October
